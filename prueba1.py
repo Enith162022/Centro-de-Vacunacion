@@ -13,7 +13,7 @@ import numpy as np
 #descripcion inicial
 st.subheader("Integrantes")
 st.write(""" - Aguilar Rojas, Enith""")  
-st.write(""" - Lizarbe Mirko""")
+st.write(""" - Fuertes Lizarbe, Mirko""")
 st.write(""" - Rojas Rua, Rocio""")
 
 st.subheader("¿Cual es el objetivo:") 
