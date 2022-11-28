@@ -9,6 +9,15 @@ import pandas as pd
 import numpy as np
 import gdown
 
+########################################################
+#id = 1Y9A1gXBN8OgLXoNVAOE3Wm7zfCkpf9Y8
+@st.experimental_memo
+def download_data():
+    url = "https://drive.google.com/uc?id= = 1Y9A1gXBN8OgLXoNVAOE3Wm7zfCkpf9Y8"
+    outpo¿ut = "data.csv"
+    gdown.download(url,output,quiet = False)
+download_data()
+
 ###################################################
 #descripcion inicial
 st.subheader("Integrantes")
