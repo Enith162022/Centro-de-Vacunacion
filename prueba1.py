@@ -14,7 +14,7 @@ import numpy as np
 st.subheader("Integrantes")
 st.write(""" - Aguilar Rojas, Enith""")  
 st.write(""" - Lizarbe Mirko""")
-st.write(""" - Rojas Rua, Rocio""")
+st.write(""" - Rojas Rua, Rocio holiwi""")
 
 st.subheader("¿Cual es el objetivo:") 
 st.write("""Facilitar al usuario la disponibilidad de centros de vacunación, dada por una estrategia para poder promocionar y facilitar la Vacunación en el país""") 
