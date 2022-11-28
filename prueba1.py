@@ -19,7 +19,7 @@ def download_data():
 download_data()
 
 ###################################################
-st.sidebar.header("sidebar")
+st.sidebar.header("Barra de menú")
 st.header("sidebar")
 #descripcion inicial
 st.title("Centros de vacunación")
