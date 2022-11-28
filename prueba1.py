@@ -19,6 +19,8 @@ def download_data():
 download_data()
 
 ###################################################
+st.sidebar.header("sidebar")
+st.header("sidebar")
 #descripcion inicial
 st.title("Centros de vacunación")
 st.subheader("Integrantes")
