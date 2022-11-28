@@ -13,7 +13,7 @@ import gdown
 #id = 1Y9A1gXBN8OgLXoNVAOE3Wm7zfCkpf9Y8
 @st.experimental_memo
 def download_data():
-    url = "https://drive.google.com/uc?id= = 1Y9A1gXBN8OgLXoNVAOE3Wm7zfCkpf9Y8"
+    url = "https://drive.google.com/uc?id= 1Y9A1gXBN8OgLXoNVAOE3Wm7zfCkpf9Y8"
     outpout = "data.csv"
     gdown.download(url,output,quiet = False)
 download_data()
