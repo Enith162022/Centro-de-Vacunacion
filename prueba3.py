@@ -13,7 +13,10 @@ st.write(""" - Rojas Rua, Rocio""")
 st.subheader("¿Cual es el objetivo:") 
 st.write("""Facilitar al usuario la disponibilidad de centros de vacunación, dada por una estrategia para poder promocionar y facilitar la Vacunación en el país""") 
 st.subheader("Contexto") 
-st.write("""holi""") 
+st.write("""_____""") 
+from PIL import Image
+image = Image.open('centro_vacuna.jpg')
+st.image(image)
 st.subheader("¿Cuáles son los síntomas del Coronavirus?") 
 ##############################################################################
 col1, col2, col3= st.columns(3)
