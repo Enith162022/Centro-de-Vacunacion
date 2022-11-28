@@ -20,6 +20,7 @@ download_data()
 
 ###################################################
 #descripcion inicial
+st.title("Centros de vacunación")
 st.subheader("Integrantes")
 st.write(""" - Aguilar Rojas, Enith""")  
 st.write(""" - Fuertes Lizarbe, Mirko""")
