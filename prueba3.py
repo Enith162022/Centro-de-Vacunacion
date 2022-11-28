@@ -3,7 +3,7 @@ download_data()
 
 ###################################################
 st.sidebar.header("Menú")
-st.header("sidebar")
+st.header("sidebar_ m")
 #descripcion inicial
 st.title("Centros de vacunación")
 st.subheader("Integrantes")
