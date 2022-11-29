@@ -32,10 +32,11 @@ st.subheader("¿Cual es el objetivo:")
 st.write("""Facilitar al usuario la disponibilidad de centros de vacunación, dada por una estrategia para poder promocionar y facilitar la Vacunación en el país""") 
 
 st.subheader("Contexto") 
-st.write("""El acceso equitativo a vacunas seguras y eficaces es fundamental""")
-st.write("""para poner fin a la pandemia de COVID-19, por lo que""")
-st.write("""es enormemente alentador ver que hay tantas vacunas en fase de prueba""")
-st.write("""La OMS está trabajando incansablemente con sus asociados para desarrollar, fabricar y desplegar vacunas seguras y eficaces.""")
+st.write("""El acceso equitativo a vacunas   seguras  y eficaces es fundamental""")
+st.write("""para poner fin a la pandemia de COVID-19, por lo que es enormemente""")
+st.write("""alentador ver que hay tantas vacunas en fase de prueba.La OMS  esta""")
+st.write("""rabajando incansablemente con asociados para desarrollar , fabricar""")
+st.write("""y desplegar vacunas seguras y eficaces.""")
 
 from PIL import Image
 image = Image.open('centro_vacuna.jpg')
