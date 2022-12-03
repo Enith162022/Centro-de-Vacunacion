@@ -26,6 +26,8 @@ def centros_vac():
                 'LONGITUD':'lon',
             })
     return df_centrosvac
+data = centros_vac()
+        st.map(data)   
 ###################################################
 st.sidebar.header("Barra de menú")
 
