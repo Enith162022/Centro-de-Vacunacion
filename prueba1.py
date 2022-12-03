@@ -18,9 +18,10 @@ def download_data():
     gdown.download(url,output,quiet = False)
 download_data()
 
+df = pd.read_csv('data.csv',sep = ";",  skip_blank_lines=True, nrows=30000)
 ###################################################
 st.sidebar.header("Barra de menú")
-st.header("sidebar")
+#st.header("sidebar")
 #descripcion inicial
 st.title("Centros de vacunación")
 st.subheader("Integrantes")
