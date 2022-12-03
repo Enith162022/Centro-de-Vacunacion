@@ -27,7 +27,7 @@ def centros_vac():
             })
     return df_centrosvac
 data = centros_vac()
-        st.map(data)   
+st.map(data)   
 ###################################################
 st.sidebar.header("Barra de menú")
 
