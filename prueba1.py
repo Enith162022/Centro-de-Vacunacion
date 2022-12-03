@@ -18,10 +18,17 @@ def download_data():
     gdown.download(url,output,quiet = False)
 download_data()
 st.dataframe(download_data())
-
+@st.cache
+def centros_vac():
+    df_centrosvac = pd.read(download_data())
+    df_centrosvac = df_centrosvac.rename(columns={
+                'LATITUD':'lat',
+                'LONGITUD':'lon',
+            })
+    return df_centrosvac
 ###################################################
 st.sidebar.header("Barra de menú")
-#st.header("sidebar")
+
 #descripcion inicial
 st.title("Centros de vacunación")
 st.subheader("Integrantes")
