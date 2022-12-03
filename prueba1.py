@@ -18,7 +18,6 @@ def download_data():
     gdown.download(url,output,quiet = False)
 download_data()
 
-df = pd.read_csv("data.csv)
 ###################################################
 st.sidebar.header("Barra de menú")
 st.header("sidebar")
