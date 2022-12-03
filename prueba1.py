@@ -16,7 +16,6 @@ def download_data():
     url = "https://drive.google.com/uc?id= 1Y9A1gXBN8OgLXoNVAOE3Wm7zfCkpf9Y8"
     output = "data.csv"
     gdown.download(url,output,quiet = False)
-    return df
 download_data()
 
 
