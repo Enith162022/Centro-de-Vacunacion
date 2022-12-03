@@ -22,8 +22,8 @@ st.dataframe(download_data())
 def centros_vac():
     df_centrosvac = pd.read(download_data())
     df_centrosvac = df_centrosvac.rename(columns={
-                'LATITUD':'lat',
-                'LONGITUD':'lon',
+                'latitud':'lat',
+                'longitud':'lon',
             })
     return df_centrosvac
 st.map(centros_vac())   
