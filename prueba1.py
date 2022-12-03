@@ -17,7 +17,7 @@ def download_data():
     output = "data.csv"
     gdown.download(url,output,quiet = False)
 download_data()
-df = pd.read_csv('data.csv',sep = ";",  skip_blank_lines=True, nrows=19388,parse_dates=['latitud', 'longitud']
+df = pd.read_csv('data.csv',sep = ";",  skip_blank_lines=True, nrows=19388,parse_dates=['latitud', 'longitud'])
 
 ###################################################
 st.sidebar.header("Barra de menú")
