@@ -19,7 +19,7 @@ def download_data():
     return df
 download_data()
 
-st.dataframe(df.head(20))
+
 ###################################################
 st.sidebar.header("Barra de menú")
 #st.header("sidebar")
