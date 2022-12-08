@@ -90,7 +90,7 @@ if option == 'Centros de Vacunación':
     
     option = st.selectbox(
         "Departamentos",
-        ("Abancay","Ayacucho","Junín","Lima","Loreto"))
+        ("Abancay","Ayacucho","Junín","Lima","Loreo"))
     
     
     
