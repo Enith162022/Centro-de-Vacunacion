@@ -86,7 +86,7 @@ excel_file = "Centros de vacunación.xlsx"
 sheet_name = "Libro1"
 df = pd.read_excel(excel_file,
                   sheet_name = sheet_name
-                  usecols = B:D
+                  usecols = "B:D"
                   header = 1)
 
 
