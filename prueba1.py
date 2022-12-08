@@ -84,13 +84,15 @@ option = st.selectbox(
     ("Centros de Vacunacion","Vacuna Car"))
 
 
+
 excel_file = "Centros de vacunación.xlsx" 
 sheet_name = "Libro1"
-st.bar_chart = pd.read_excel(excel_file,
+chart_data = pd.DataFrame(excel_file,
                   sheet_name = sheet_name,
                   usecols = "B:D",
                   header = 1)
 
+st.bar_chart(chart_data)
 
 
 
