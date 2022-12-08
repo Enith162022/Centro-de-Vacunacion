@@ -7,7 +7,7 @@ Created on Mon Nov 21 17:20:39 2022
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly.express as px 
+import plotly.express as px
 
 import gdown
 
