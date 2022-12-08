@@ -7,6 +7,7 @@ Created on Mon Nov 21 17:20:39 2022
 import streamlit as st
 import pandas as pd
 import numpy as np
+import plotly.express as px
 import gdown
 
 ########################################################
@@ -51,7 +52,6 @@ from PIL import Image
 image = Image.open('centro_vacuna.jpg')
 st.image(image)
 
-
 st.subheader("¿Cuáles son los síntomas del Coronavirus?") 
 ##############################################################################
 col1, col2, col3= st.columns(3)
@@ -81,6 +81,17 @@ st.write("**Fuente:** ONU https://www.who.int/es/health-topics/coronavirus#tab=t
 option = st.selectbox(
     "Elija una modalidad de vacunación, Centros de Vacunacion o Vacuna Car",
     ("Centros de Vacunacion","Vacuna Car"))
+
+excel_file = "Centros de vacunación.xlsx" 
+sheet_name = "Libro1"
+df = pd.read_excel(excel_file,
+                  sheet_name = sheet_name
+                  usecols = B:D
+                  header = 1)
+
+
+
+
 
 st.write("Seleccionó:", option)
 if option == 'Centros de Vacunación':   
