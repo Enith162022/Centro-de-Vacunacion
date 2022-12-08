@@ -7,7 +7,7 @@ Created on Mon Nov 21 17:20:39 2022
 import streamlit as st
 import pandas as pd
 import numpy as np
-#import plotly.express as px
+import plotly.express as px
 
 import gdown
 
@@ -87,12 +87,11 @@ option = st.selectbox(
 
 excel_file = "Centros de vacunación.xlsx" 
 sheet_name = "Libro1"
-chart_data = pd.DataFrame(excel_file,
+df = pd.read_excel(excel_file,
                   sheet_name = sheet_name,
                   usecols = "B:D",
                   header = 1)
 
-st.bar_chart(chart_data)
 
 
 
