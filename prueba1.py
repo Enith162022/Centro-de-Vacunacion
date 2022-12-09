@@ -17,15 +17,6 @@ from streamlit_echarts import st_pyecharts
 from streamlit_echarts import st_echarts
 #id = 1Gu65mnJ_lxE0BdbkL1nTq5qaFJ1dJ9tq
 @st.experimental_memo
-def download_data():
-     url = "https://docs.google.com/spreadsheets/d/13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM/edit#gid=46563781"
-     output = 'data.csv'
-     gdown.download(url,output,quiet=False)
-download_data()
-#df = pd.read_csv(r'C:\Users\51952\Downloads\PositivosCovid\positivos_covid.csv',sep=";", skip_blank_lines=True, parse_dates=['id_centro_vacunacion', 'id_eess'])
-df = pd.read_csv('data.csv',sep = ";",  skip_blank_lines=True, nrows=1000000,parse_dates=['id_centro_vacunacion', 'id_eess']) 
-
-
 
 #################################
 #id = 1Y9A1gXBN8OgLXoNVAOE3Wm7zfCkpf9Y8
