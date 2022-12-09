@@ -69,12 +69,13 @@ st.dataframe(df)
 ################################################################gif
 option = ["Departamentos", "nombre"]
 model = st.sidebar.selectbox("Elija una opción",option)
+if option == "Departamentos":
     archivo_excel = "DATOSF.xlsx"
     hoja_excel = "TABLA1"
-    """df = pd.read_excel(archivo_excel,
+    df = pd.read_excel(archivo_excel,
                        sheet_name = hoja_excel,
                        usecols = "A:C",
-                      )"""
+                      )
     st.dataframe(df)
     df_personas = df.groupby(['Departamento'], as_index = False)['C.Vac'].count()   
     st.dataframe(df) 
@@ -85,7 +86,7 @@ model = st.sidebar.selectbox("Elija una opción",option)
                        values = 'C.Vac',
                        names = 'Departamento') 
     st.plotly_chart(pie_chart) 
-    
+    """
     st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
     file_ = open("k87feb4b.png", "rb")
     contents = file_.read()
@@ -94,8 +95,7 @@ model = st.sidebar.selectbox("Elija una opción",option)
     st.markdown(
     f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
     unsafe_allow_html=True,
-    )
-################tabla circular
+    )"""
 
 ###########################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
