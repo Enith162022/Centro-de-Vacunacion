@@ -42,8 +42,7 @@ with col1:
     st.write("""- Tos""")
     st.write("""- Pérdida del gusto o del olfato        
              """)
-    st.write(:syringe:) 
-            
+    st.write(":syringe: MAL") 
             
 with col2:
     st.subheader("Síntomas menos habituales") 
