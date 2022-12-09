@@ -69,8 +69,8 @@ df = pd.read_excel(archivo_excel,
 option = ["Departamentos", "nombre"]
 model = st.sidebar.selectbox("Elija una opción",option)
 df_agrupado = df[mask].groupby(["Departamento"].count(),[["# Centros de Vacunación"]])
-df_agrupado = df_agrupado.rename(columns={# Centros de Vacunación":"Cantidad"})
-df_agrupado = df_agrupado.reset_index()
+#df_agrupado = df_agrupado.rename(columns={# Centros de Vacunación":"Cantidad"})
+#df_agrupado = df_agrupado.reset_index()
 #para grafica de barras
 bar_chart = px.bar(df_agrupado,
                    x= "Departamentos",
