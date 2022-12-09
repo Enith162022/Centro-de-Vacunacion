@@ -79,7 +79,7 @@ Distritos = st.sidebar.multiselect(
     default = df['# Centros de Vacunación'].unique()
 )
 
-
+df_seleccion = df.query("Departamento == @Departamento  & # Centros de Vacunación == @# Centros de Vacunación" )
 
 ################################################################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
