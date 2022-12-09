@@ -67,10 +67,10 @@ with col3:
 
 st.write("**Fuente:** ONU https://www.who.int/es/health-topics/coronavirus#tab=tab_3")
 #######################################################3333333333
-excel_file = "CV.xlsx" 
-sheet_name = "Libro1"
-df = pd.read_excel(excel_file,
-                  sheet_name = sheet_name,
+excel_excel= "CV.xlsx" 
+hoja_excel = "Libro1"
+df = pd.read_excel(excel_excel,
+                  sheet_name = hoja_excel,
                   usecols = "B:D",
                   header = 1)
 
