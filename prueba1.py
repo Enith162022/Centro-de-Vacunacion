@@ -59,9 +59,6 @@ with col3:
     """)
     
 st.write("**Fuente:** ONU https://www.who.int/es/health-topics/coronavirus#tab=tab_3")
-option = ["Departamentos", "nombre"]
-model = st.sidebar.selectbox("Elija una opción",option)
-
 ################################################################
 st.subheader("Base de datos") 
 st.write("""La base de datos trabaja con un total de 19385 Centros de Vacunación en todo el país""")  
@@ -73,8 +70,22 @@ df = pd.read_excel(archivo_excel,
                   )
 st.dataframe(df) 
 ################################################################
+option = ["Departamentos", "nombre"]
+model = st.sidebar.selectbox("Elija una opción",option)
+if option == "Departamentos":
+    st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
+    file_ = open("k87feb4b.png", "rb")
+    contents = file_.read()
+    data_url = base64.b64encode(contents).decode("utf-8")
+    file_.close()
+    st.markdown(
+        f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
+        unsafe_allow_html=True,
+)
 
-st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
+
+
+"""st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
 file_ = open("k87feb4b.png", "rb")
 contents = file_.read()
 data_url = base64.b64encode(contents).decode("utf-8")
@@ -83,7 +94,7 @@ st.markdown(
     f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
     unsafe_allow_html=True,
 )
-
+"""
 
 
 
