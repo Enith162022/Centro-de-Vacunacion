@@ -72,7 +72,16 @@ df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
                    usecols = "A:C",
                   )
+"""
+archivo_excel = 'Reporte de Ventas.xlsx' 
+hoja_excel = 'BASE DE DATOS' 
 
+df = pd.read_excel(archivo_excel,
+                   sheet_name = hoja_excel,
+                   usecols = 'A:P')
+                   #header = 0"""
+
+st.dataframe(df) 
 
 
 ################################################################
