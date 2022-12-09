@@ -70,9 +70,9 @@ st.write("**Fuente:** ONU https://www.who.int/es/health-topics/coronavirus#tab=t
 excel_excel= "CV.xlsx" 
 hoja_excel = "Libro1"
 df = pd.read_excel(excel_excel,
-                  sheet_name = hoja_excel,
-                  usecols = "B:D",
-                  header = 1)
+                   sheet_name = hoja_excel,
+                   usecols = "B:D",
+                   header = 1)
 
 
 
