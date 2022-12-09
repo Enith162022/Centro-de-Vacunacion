@@ -9,7 +9,9 @@ import gdown
 import streamlit as st
 import pandas as pd
 import numpy as np
+
 from pyecharts import options as opts
+
 from pyecharts.charts import Bar
 from streamlit_echarts import st_pyecharts
 from streamlit_echarts import st_echarts
