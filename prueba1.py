@@ -66,7 +66,7 @@ df = pd.read_excel(archivo_excel,
                    usecols = "A:F",
                   )
 st.dataframe(df) 
-################################################################
+################################################################gif
 option = ["Departamentos", "nombre"]
 model = st.sidebar.selectbox("Elija una opción",option)
     
@@ -88,13 +88,12 @@ df = pd.read_excel(archivo_excel,
                   )
 st.dataframe(df)
 df_personas = df.groupby(['Departamento'], as_index = False)['C.Vac'].count()   
-df_personas2 = df_personas 
 st.dataframe(df) 
-st.write(df_personas2) 
+st.write(df_personas) 
 #Crear un grafico de torta (pie chart)
-pie_chart = px.pie(df_personas2, #tomo el dataframe2
-                   title = 'Total No. of Participants', #El titulo
-                   values = 'C.Vac',##columna
+pie_chart = px.pie(df_personas, 
+                   title = 'Participantes', 
+                   values = 'C.Vac',
                    names = 'Departamento') 
 st.plotly_chart(pie_chart) 
 
