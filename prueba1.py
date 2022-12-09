@@ -60,12 +60,13 @@ with col3:
     
 st.write("**Fuente:** ONU https://www.who.int/es/health-topics/coronavirus#tab=tab_3")
 ################################################################
-archivo_excel = 'DATOSF.xlsx' 
-hoja_excel = 'TABLA1'
+archivo_excel = "DATOSF.xlsx"
+hoja_excel = "TABLA1"
 
 df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
-                   usecols = 'A:C')
+                   usecols = "A:C")
+
 option = ["Departamentos", "nombre"]
 model = st.sidebar.selectbox("Elija una opción",option)
 
