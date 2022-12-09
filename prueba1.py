@@ -75,7 +75,7 @@ st.dataframe(df)
 ################################################################
 
 st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
-file_ = open("17902-covid19.gif", "rb")
+file_ = open("k87feb4b.png", "rb")
 contents = file_.read()
 data_url = base64.b64encode(contents).decode("utf-8")
 file_.close()
