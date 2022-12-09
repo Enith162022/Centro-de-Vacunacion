@@ -69,15 +69,13 @@ df = pd.read_excel(archivo_excel,
                   )
 st.dataframe(df) 
 ################################################################
-df = px.bar(
+dc = px.bar(
     x="Departamento",
     y='C.Vac',
     title = '<b>Departamentos vs C.Vacunación</b>',
     template = 'plotly_white',
 )
-
-st.dataframe(df)
-
+st.bar_chart(dc)
 ###########################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
 #@st.experimental_nemo
