@@ -69,7 +69,11 @@ df = pd.read_excel(archivo_excel,
                   )
 st.dataframe(df) 
 ################################################################
-file_ = open("https://lottiefiles.com/17902-covid19", "rb")
+
+"""### gif from url"""
+st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
+
+file_ = open("", "rb")
 contents = file_.read()
 data_url = base64.b64encode(contents).decode("utf-8")
 file_.close()
@@ -78,6 +82,9 @@ st.markdown(
     f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
     unsafe_allow_html=True,
 )
+
+
+
 
 ###########################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
