@@ -21,7 +21,7 @@ st.sidebar.header("Barra de menú")
 
 #descripcion inicial
 st.set_page_config(page_title = 'Centros de Vacunación',
-                   page_icon = ':syringe:', 
+                   page_icon = 'syringe:', 
                    )
 
 st.title("Centros de vacunación")
