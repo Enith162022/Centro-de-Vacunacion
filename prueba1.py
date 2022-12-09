@@ -77,15 +77,15 @@ file_.close()
 st.markdown(
     f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
     unsafe_allow_html=True,
-
+)
 
 ###########################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
 #@st.experimental_nemo
-def dowload_data():
-    url="https://drive.google.com/uc?id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM"
-    output="data.csv"
-    gdown.download(url,output,quiet=False)
+#def dowload_data():
+    #url="https://drive.google.com/uc?id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM"
+    #output="data.csv"
+    #gdown.download(url,output,quiet=False)
 
     
     
