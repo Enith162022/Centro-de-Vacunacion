@@ -66,13 +66,13 @@ df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
                    usecols = 'B:D')
 
-st.sidebar.header("Departamentos del Perú:") #sidebar lo que nos va a hacer es crear en la parte izquierda un cuadro para agregar los filtros que queremos tener
-Departamentos = st.sidebar.multiselect(
+st.sidebar.header("Departamentos del Perú:")
+Departamento = st.sidebar.multiselect(
     "Seleccione un departamento:",
     options = df['Departamento'].unique(),
 )
 
-distritos = st.sidebar.multiselect(
+Distritos = st.sidebar.multiselect(
     "Seleccione:",
     options = df['# Centros de Vacunación'].unique(),
 )
