@@ -64,7 +64,7 @@ archivo_excel = 'DATOSF.xlsx'
 hoja_excel = 'TABLA1'
 df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
-                   usecols = 'A:C')
+                   usecols = 'A:F')
 
 option = ["Departamentos", "nombre"]
 model = st.sidebar.selectbox("Elija una opción",option)
