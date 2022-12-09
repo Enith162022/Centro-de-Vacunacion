@@ -68,6 +68,7 @@ df = pd.read_excel(archivo_excel,
                    usecols = 'A:F')
 
 option = ["Departamentos", "nombre"]
+
 model = st.sidebar.selectbox("Elija una opción",option)
 
 
