@@ -39,6 +39,7 @@ with col1:
     st.subheader("Síntomas habituales:frowning:")   
     st.write("""- Cansancio""")
     st.write("""- Tos""")
+    st.write("""- Fiebre""")
     st.write("""- Pérdida del gusto o del olfato
     """)
     
@@ -46,6 +47,7 @@ with col2:
     st.subheader("Síntomas menos habituales:confused:") 
     st.write("""- Dolor de garganta""")
     st.write("""- Molestias""")
+    st.write("""- Erupción cutánea""")
     st.write("""- Diarrea
     """)
     
