@@ -59,6 +59,15 @@ with col2:
     st.write("""- Erupción cutánea""")
     st.write("""- Diarrea
     """) 
+    st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
+    file_ = open("17902-covid19.gif", "rb")
+    contents = file_.read()
+    data_url = base64.b64encode(contents).decode("utf-8")
+    file_.close()
+    st.markdown(
+        f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
+        unsafe_allow_html=True,
+    )
 with col3:
     st.subheader("Síntomas graves:mask:") 
     st.write("""-  Dificultad para respirar o falta de aire""")
