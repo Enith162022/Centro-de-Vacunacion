@@ -76,8 +76,8 @@ if option == "Departamentos":
                        sheet_name = hoja_excel,
                        usecols = "A:C",
                       )
-
-    """
+    st.dataframe(df)
+    
     st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
     file_ = open("k87feb4b.png", "rb")
     contents = file_.read()
@@ -86,9 +86,8 @@ if option == "Departamentos":
     st.markdown(
     f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
     unsafe_allow_html=True,
-    )"""
+    )
 else:
-st.dataframe(df)
 df_personas = df.groupby(['Departamento'], as_index = False)['C.Vac'].count()   
 st.dataframe(df) 
 st.write(df_personas) 
