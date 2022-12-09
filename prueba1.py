@@ -65,6 +65,16 @@ hoja_excel = 'TABLA'
 df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
                    usecols = 'B:D')
+
+st.sidebar.header("Departamentos del Perú:") #sidebar lo que nos va a hacer es crear en la parte izquierda un cuadro para agregar los filtros que queremos tener
+Departamentos = st.sidebar.multiselect(
+    "Seleccione un departamento:",
+    options = df['Vendedor'].unique(),
+)
+
+
+
+
 ################################################################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
 #@st.experimental_nemo
@@ -75,7 +85,7 @@ def dowload_data():
 
 #############################
 
-st.write("Seleccionó:", option)
+"""st.write("Seleccionó:", option)
 if option == 'Centros de Vacunación':   
 #ENCABEZADO DE LA PÁGINA#######################################################
     st.title("       Centro de vacunación COVID19")
@@ -83,7 +93,7 @@ if option == 'Centros de Vacunación':
     
     option = st.selectbox(
         "Departamentos",
-        ("Abancay","Ayacucho","Junín","Lima","Loreo"))
+        ("Abancay","Ayacucho","Junín","Lima","Loreo"))"""
     
     
     
