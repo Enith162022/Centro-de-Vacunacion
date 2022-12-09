@@ -64,20 +64,21 @@ archivo_excel = 'DATOSF.xlsx'
 hoja_excel = 'TABLA1'
 df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
-                   usecols = 'A:F')
+                   usecols = 'A:C')
 
 option = ["Departamentos", "nombre"]
 model = st.sidebar.selectbox("Elija una opción",option)
 
-df_dep = df.groupby(["Departamento"], as_index = False)["# Centros de Vacunación"].count
-st.dataframe(df)
-st.write(df_dep)
-
-pie_chart = px.pie(df_dep,
-                   title = "Departamentos vs números de centros de vacunación",
-                   values = "# Centros de Vacunación",
-                   names = "Departamento")
-st.plotly_chart(pie_chart)
+df_agrupado = df[mask].groupby(["Departamento"].count(),[["# Centros de Vacunación"]]
+df_agrupado = df_agrupado.rename(columns={# Centros de Vacunación":"Cantidad"})
+df_agrupado = df_agrupado.reset_index()
+#para grafica de barras
+bar_chart = px.bar(df_agrupado,
+                   x= "Departamentos",
+                   y = "Cantidad",
+                   color_discrete_sequence = ["#f5b632"]*len(df_agrupado),
+                   template = "plotly_white")
+st.plotly_chart(bar_chart)
 
 ################################################################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
