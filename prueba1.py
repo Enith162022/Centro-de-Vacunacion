@@ -69,7 +69,7 @@ df = pd.read_excel(archivo_excel,
 st.sidebar.header("Departamentos del Perú:")
 Depart = st.sidebar.multiselect(
     "Seleccione un departamento:",
-    options = df['Departamento'].unique(),
+    #options = df['Departamento'].unique(),
     default = df['Departamento'].unique() 
 )
 
