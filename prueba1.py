@@ -61,13 +61,23 @@ with col3:
 st.write("**Fuente:** ONU https://www.who.int/es/health-topics/coronavirus#tab=tab_3")
 ################################################################
 archivo_excel = 'DATOSF.xlsx' 
-hoja_excel = 'BaseD'
+hoja_excel = 'TABLA1'
 df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
                    usecols = 'A:F')
 
 option = ["Departamentos", "nombre"]
 model = st.sidebar.selectbox("Elija una opción",option)
+
+df_dep = df.groupby(["Departamento"], as_index = False)["# Centros de Vacunación"].count
+st.dataframe(df)
+st.write(df_dep)
+
+pie_chart = px.pie(df_dep,
+                   title = "Departamentos vs números de centros de vacunación",
+                   values = "# Centros de Vacunación",
+                   names = "Departamento")
+st.plotly_chart(pie_chart)
 
 ################################################################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
