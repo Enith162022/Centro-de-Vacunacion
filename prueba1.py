@@ -16,11 +16,9 @@ from pyecharts import options as opts
 from pyecharts.charts import Bar
 from streamlit_echarts import st_pyecharts
 from streamlit_echarts import st_echarts
-
-
-#################################
+########################################
  #@st.experimental_memo
- def download_data():
+ #def download_data():
  
 ###################################################
 st.sidebar.header("Barra de menú")
