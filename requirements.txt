@@ -1,4 +1,4 @@
 gdown
 pyecharts
 streamlit_echarts
-plotly.express
+plotly_express
