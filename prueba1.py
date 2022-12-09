@@ -67,19 +67,19 @@ df = pd.read_excel(archivo_excel,
                    usecols = 'B:D')
 
 st.sidebar.header("Departamentos del Perú:")
-Departamento = st.sidebar.multiselect(
+Depart = st.sidebar.multiselect(
     "Seleccione un departamento:",
     options = df['Departamento'].unique(),
     default = df['Departamento'].unique() 
 )
 
-Distritos = st.sidebar.multiselect(
+Centros = st.sidebar.multiselect(
     "Seleccione:",
     options = df['# Centros de Vacunación'].unique(),
     default = df['# Centros de Vacunación'].unique()
 )
 
-df_seleccion = df.query("Departamento == @Departamento  & # Centros de Vacunación == @# Centros de Vacunación" )
+df_seleccion = df.query("Departamento == @Depart  & # Centros de Vacunación == @Centros" )
 
 ################################################################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
