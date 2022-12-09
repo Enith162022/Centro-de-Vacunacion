@@ -9,7 +9,7 @@ import gdown
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly.express as px
+import urllib.request
 
 from pyecharts import options as opts
 
@@ -19,6 +19,8 @@ from streamlit_echarts import st_echarts
 
 
 #################################
+ @st.experimental_memo
+ def download_data():
  
 ###################################################
 st.sidebar.header("Barra de menú")
