@@ -42,8 +42,6 @@ with col1:
     st.write("""- Fiebre""")
     st.write("""- Pérdida del gusto o del olfato
     """)
-
-
 with col2:
     st.subheader("Síntomas menos habituales:confused:") 
     st.write("""- Dolor de garganta""")
@@ -57,7 +55,6 @@ with col3:
     st.write("""- Pérdida del habla o la movilidad, o confusión""")
     st.write("""- Dolor en el pecho
     """)
-    
 st.write("**Fuente:** ONU https://www.who.int/es/health-topics/coronavirus#tab=tab_3")
 ################################################################
 st.subheader("Base de datos") 
@@ -72,8 +69,9 @@ st.dataframe(df)
 ################################################################
 option = ["Departamentos", "nombre"]
 model = st.sidebar.selectbox("Elija una opción",option)
+
 if option == "Departamentos":
-    st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
+    #st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
     file_ = open("k87feb4b.png", "rb")
     contents = file_.read()
     data_url = base64.b64encode(contents).decode("utf-8")
@@ -81,20 +79,8 @@ if option == "Departamentos":
     st.markdown(
         f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
         unsafe_allow_html=True,
-)
+    )
 
-
-
-"""st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
-file_ = open("k87feb4b.png", "rb")
-contents = file_.read()
-data_url = base64.b64encode(contents).decode("utf-8")
-file_.close()
-st.markdown(
-    f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
-    unsafe_allow_html=True,
-)
-"""
 
 
 
