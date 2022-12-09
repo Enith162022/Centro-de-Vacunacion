@@ -67,23 +67,9 @@ df = pd.read_excel(archivo_excel,
                    usecols = 'A:F')
 
 st.sidebar.header("Departamentos del Perú:")
-depart = st.sidebar.multiselect(
-    "Seleccione el Departamento:",
-    options = df[''].unique(),
-    default = df[''].unique() 
-)
 
-nombres = st.sidebar.multiselect(
-    "Seleccione :",
-    options = df['nombre'].unique(),
-    default = df['nombre'].unique() 
-)
 
-df_sele = df.query(" == @depart  & nombre == @nombres" )
-total_nombre = int(df_sele['nombre'].count())
-left_column, right_column = st.columns(2)
 
-st.dataframe(df_sele) 
 
 ################################################################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
