@@ -42,25 +42,20 @@ with col1:
     st.write("""- Pérdida del gusto o del olfato
     """)
     
-    st.write(":frowning:") 
-    
 with col2:
-    st.subheader("Síntomas menos habituales") 
+    st.subheader("Síntomas menos habituales:confused:") 
     st.write("""- Dolor de garganta""")
     st.write("""- Molestias""")
     st.write("""- Diarrea
     """)
     
-    st.write(":confused:") 
-    
 with col3:
-    st.subheader("Síntomas graves") 
+    st.subheader("Síntomas graves:mask:") 
     st.write("""-  Dificultad para respirar o falta de aire""")
     st.write("""- Pérdida del habla o la movilidad, o confusión""")
     st.write("""- Dolor en el pecho
     """)
     
-    st.write(":mask:")
 st.write("**Fuente:** ONU https://www.who.int/es/health-topics/coronavirus#tab=tab_3")
 
 
