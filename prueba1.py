@@ -76,16 +76,7 @@ if option == "Departamentos":
                        sheet_name = hoja_excel,
                        usecols = "A:C",
                       )
-    st.dataframe(df)
-    df_personas = df.groupby(['Departamento'], as_index = False)['C.Vac'].count()   
-    st.dataframe(df) 
-    st.write(df_personas) 
-    #Crear un grafico de torta (pie chart)
-    pie_chart = px.pie(df_personas, 
-                       title = 'Participantes', 
-                       values = 'C.Vac',
-                       names = 'Departamento') 
-    st.plotly_chart(pie_chart) 
+
     """
     st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
     file_ = open("k87feb4b.png", "rb")
@@ -96,7 +87,19 @@ if option == "Departamentos":
     f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
     unsafe_allow_html=True,
     )"""
-
+else:
+st.dataframe(df)
+df_personas = df.groupby(['Departamento'], as_index = False)['C.Vac'].count()   
+st.dataframe(df) 
+st.write(df_personas) 
+#Crear un grafico de torta (pie chart)
+pie_chart = px.pie(df_personas, 
+                   title = 'Participantes', 
+                   values = 'C.Vac',
+                   names = 'Departamento') 
+st.plotly_chart(pie_chart)     
+    
+    
 ###########################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
 #@st.experimental_nemo
