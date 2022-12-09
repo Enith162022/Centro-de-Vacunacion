@@ -9,6 +9,7 @@ import gdown
 import streamlit as st
 import pandas as pd
 import numpy as np
+import plotly.express as px
 
 from pyecharts import options as opts
 
@@ -92,12 +93,12 @@ option = st.selectbox(
 
 
 
-"""excel_file = "Centros de vacunación.xlsx" 
+excel_file = "Centros de vacunación.xlsx" 
 sheet_name = "Libro1"
 df = pd.read_excel(excel_file,
                   sheet_name = sheet_name,
                   usecols = "B:D",
-                  header = 1)"""
+                  header = 1)
 
 st.write("Seleccionó:", option)
 if option == 'Centros de Vacunación':   
