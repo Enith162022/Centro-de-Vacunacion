@@ -18,6 +18,7 @@ from streamlit_echarts import st_pyecharts
 from streamlit_echarts import st_echarts
 ###################################################
 st.sidebar.header("Barra de menú")
+
 st.title(':syringe: Centros de Vacunación') 
 st.subheader("Integrantes")
 st.write(""" - Aguilar Rojas, Enith""")  
@@ -65,11 +66,10 @@ hoja_excel = 'Centros de vacunacion final'
 df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
                    usecols = 'A:F')
-
 st.sidebar.header("Departamentos del Perú:")
 
-
-
+option = ["Departamentos", "nombre"]
+model = st.sidebar.selectbox("Elija una opción",option)
 
 ################################################################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
@@ -79,17 +79,5 @@ def dowload_data():
     output="data.csv"
     gdown.download(url,output,quiet=False)
 
-#############################
-
-"""st.write("Seleccionó:", option)
-if option == 'Centros de Vacunación':   
-#ENCABEZADO DE LA PÁGINA#######################################################
-    st.title("       Centro de vacunación COVID19")
-    st.write("Elija el departamento dónde desea vacunarse.")
-    
-    option = st.selectbox(
-        "Departamentos",
-        ("Abancay","Ayacucho","Junín","Lima","Loreo"))"""
-    
     
     
