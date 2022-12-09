@@ -41,7 +41,17 @@ with col1:
     st.write("""- Tos""")
     st.write("""- Fiebre""")
     st.write("""- Pérdida del gusto o del olfato
-    """)  
+    """)
+    st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
+    file_ = open("17902-covid19.gif", "rb")
+    contents = file_.read()
+    data_url = base64.b64encode(contents).decode("utf-8")
+    file_.close()
+    st.markdown(
+        f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
+        unsafe_allow_html=True,
+    )
+
 with col2:
     st.subheader("Síntomas menos habituales:confused:") 
     st.write("""- Dolor de garganta""")
@@ -71,14 +81,11 @@ df = pd.read_excel(archivo_excel,
 st.dataframe(df) 
 ################################################################
 
-"""### gif from url"""
 st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
-
 file_ = open("17902-covid19.gif", "rb")
 contents = file_.read()
 data_url = base64.b64encode(contents).decode("utf-8")
 file_.close()
-
 st.markdown(
     f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
     unsafe_allow_html=True,
