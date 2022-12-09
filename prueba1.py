@@ -39,17 +39,16 @@ with col1:
     st.subheader("Síntomas habituales")   
     st.write("""- Cansancio""")
     st.write("""- Tos""")
-    st.write("""- Pérdida del gusto o del olfato        
-             """)
+    st.write("""- Pérdida del gusto o del olfato""")
     st.write(":frowning:") 
     
 with col2:
     st.subheader("Síntomas menos habituales") 
     st.write("""- Dolor de garganta""")
     st.write("""- Molestias""")
-    st.write("""- Diarrea""")        
-             """)
+    st.write("""- Diarrea""")
     st.write(":confused:") 
+    
 with col3:
     st.subheader("Síntomas graves") 
     st.write("""-  Dificultad para respirar o falta de aire""")
