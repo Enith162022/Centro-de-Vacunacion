@@ -64,10 +64,9 @@ model = st.sidebar.selectbox("Elija una opción",option)
 
 ################################################################
 
+st.write("""La base de datos trabaja con un total de 19385 centros de vacunación en todo el país""")  
 archivo_excel = "DATOSF.xlsx"
-
 hoja_excel = "BaseD"
-
 df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
                    usecols = "A:F",
