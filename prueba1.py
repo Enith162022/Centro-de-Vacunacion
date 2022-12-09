@@ -49,7 +49,6 @@ st.write(""" - Rojas Rua, Rocio""")
 
 st.subheader("¿Cual es el objetivo:") 
 st.write("""Facilitar al usuario la disponibilidad de centros de vacunación, dada por una estrategia para poder promocionar y facilitar la Vacunación en el país""") 
-
 st.subheader("Contexto") 
 st.write("""El acceso equitativo a vacunas   seguras  y eficaces es fundamental""")
 st.write("""para poner fin a la pandemia de COVID-19, por lo que es enormemente""")
@@ -60,7 +59,6 @@ st.write("""y desplegar vacunas seguras y eficaces.""")
 from PIL import Image
 image = Image.open('centro_vacuna.jpg')
 st.image(image)
-
 st.subheader("¿Cuáles son los síntomas del Coronavirus?") 
 ##############################################################################
 col1, col2, col3= st.columns(3)
@@ -78,7 +76,6 @@ with col2:
     st.write("""- Diarrea""")
     st.write("""- Erupción cutánea        
              """)
-    
 with col3:
     st.subheader("Síntomas graves") 
     st.write("""-  Dificultad para respirar o falta de aire""")
@@ -86,13 +83,7 @@ with col3:
     st.write("""- Dolor en el pecho""")
 
 st.write("**Fuente:** ONU https://www.who.int/es/health-topics/coronavirus#tab=tab_3")
-
-option = st.selectbox(
-    "Elija una modalidad de vacunación, Centros de Vacunacion o Vacuna Car",
-    ("Centros de Vacunacion","Vacuna Car"))
-
-
-
+#######################################################3333333333
 excel_file = "Centros de vacunación.xlsx" 
 sheet_name = "Libro1"
 df = pd.read_excel(excel_file,
