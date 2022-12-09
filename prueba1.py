@@ -69,38 +69,35 @@ st.dataframe(df)
 ################################################################
 option = ["Departamentos", "nombre"]
 model = st.sidebar.selectbox("Elija una opción",option)
-
-if option == "Departamentos":
-    archivo_excel = "DATOSF.xlsx"
-    hoja_excel = "TABLA1"
-    df = pd.read_excel(archivo_excel,
-                       sheet_name = hoja_excel,
-                       usecols = "A:C",
-                      )
-    st.dataframe(df) 
-    st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
-    file_ = open("k87feb4b.png", "rb")
-    contents = file_.read()
-    data_url = base64.b64encode(contents).decode("utf-8")
-    file_.close()
-    st.markdown(
-        f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
-        unsafe_allow_html=True,
-    )
+    
+st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
+file_ = open("k87feb4b.png", "rb")
+contents = file_.read()
+data_url = base64.b64encode(contents).decode("utf-8")
+file_.close()
+st.markdown(
+    f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
+    unsafe_allow_html=True,
+)
 ################tabla circular
-"""
-df_personas = df.groupby(['EPS'], as_index = False)['EDAD PERSONA ENCUESTADA'].count()   
-df_personas2 = df_personas #la guardo en otro dataframe (NO ES NECESARIO)
-st.dataframe(df) #de esta forma nos va a mostrar el dataframe en Streamlit
-st.write(df_personas2) #este nos sirve cuando no tenemos dataframe sino object****
+archivo_excel = "DATOSF.xlsx"
+hoja_excel = "TABLA1"
+df = pd.read_excel(archivo_excel,
+                   sheet_name = hoja_excel,
+                   usecols = "A:C",
+                  )
+st.dataframe(df)
+df_personas = df.groupby(['Departamento'], as_index = False)['C.Vac'].count()   
+df_personas2 = df_personas 
+st.dataframe(df) 
+st.write(df_personas2) 
 #Crear un grafico de torta (pie chart)
 pie_chart = px.pie(df_personas2, #tomo el dataframe2
                    title = 'Total No. of Participants', #El titulo
-                   values = 'EDAD PERSONA ENCUESTADA',##columna
-                   names = 'EPS') ## para verlo por EPS --> Colores
-st.plotly_chart(pie_chart) # de esta forma se va a mostrar el dataframe en Streamlit
+                   values = 'C.Vac',##columna
+                   names = 'Departamento') 
+st.plotly_chart(pie_chart) 
 
-"""
 
 ###########################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
