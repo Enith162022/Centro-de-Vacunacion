@@ -19,7 +19,7 @@ from streamlit_echarts import st_echarts
 
 
 #################################
- @st.experimental_memo
+ #@st.experimental_memo
  def download_data():
  
 ###################################################
