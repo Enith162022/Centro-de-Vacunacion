@@ -66,21 +66,12 @@ model = st.sidebar.selectbox("Elija una opción",option)
 
 archivo_excel = "DATOSF.xlsx"
 
-hoja_excel = "TABLA1"
+hoja_excel = "BaseD"
 
 df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
-                   usecols = "A:C",
+                   usecols = "A:F",
                   )
-"""
-archivo_excel = 'Reporte de Ventas.xlsx' 
-hoja_excel = 'BASE DE DATOS' 
-
-df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = 'A:P')
-                   #header = 0"""
-
 st.dataframe(df) 
 
 
