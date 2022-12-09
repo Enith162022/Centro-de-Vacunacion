@@ -61,7 +61,7 @@ with col3:
 st.write("**Fuente:** ONU https://www.who.int/es/health-topics/coronavirus#tab=tab_3")
 ################################################################
 archivo_excel = 'DATOSF.xlsx' 
-hoja_excel = 'Centros de vacunacion final' 
+hoja_excel = 'BaseF' 
 df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
                    usecols = 'A:F')
