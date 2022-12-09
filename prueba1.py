@@ -25,7 +25,7 @@ st.write(""" - Fuertes Lizarbe, Mirko""")
 st.write(""" - Rojas Rua, Rocio""")
 ######################################################
 st.subheader("¿Cual es el objetivo:") 
-st.write("""Facilitar al usuario la disponibilidad de centros de vacunación, dada por una estrategia para poder promocionar y facilitar la Vacunación en el país""") 
+st.write("""Facilitar al usuario la disponibilidad de centros de vacunación en todo el país, dada por una estrategia para poder promocionar y facilitar la Vacunación en diversos departamentos y respectivos distritos de todo el Perú""") 
 st.subheader("Contexto") 
 st.write("""El acceso equitativo a vacunas   seguras  y eficaces es fundamental""")
 st.write("""para poner fin a la pandemia de COVID-19, por lo que es enormemente""")
@@ -58,8 +58,9 @@ with col3:
     st.write("""-  Dificultad para respirar o falta de aire""")
     st.write("""- Pérdida del habla o la movilidad, o confusión""")
     st.write("""- Dolor en el pecho""")
-
 st.write("**Fuente:** ONU https://www.who.int/es/health-topics/coronavirus#tab=tab_3")
+
+
 ##############################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
 #@st.experimental_nemo
