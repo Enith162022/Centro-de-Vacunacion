@@ -3,15 +3,27 @@
 Created on Mon Nov 21 17:20:39 2022
 @author: Enith
 """
-#BARRA LATERAL#############################################
+#BARRA LATERAL
+########################################################
+import gdown
 import streamlit as st
 import pandas as pd
 import numpy as np
-#import plotly.express as px
+from pyecharts import options as opts
+from pyecharts.charts import Bar
+from streamlit_echarts import st_pyecharts
+from streamlit_echarts import st_echarts
+#id = 1Gu65mnJ_lxE0BdbkL1nTq5qaFJ1dJ9tq
+@st.experimental_memo
+def download_data():
+     url = "https://docs.google.com/spreadsheets/d/13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM/edit#gid=46563781"
+     output = 'data.csv'
+     gdown.download(url,output,quiet=False)
+download_data()
+#df = pd.read_csv(r'C:\Users\51952\Downloads\PositivosCovid\positivos_covid.csv',sep=";", skip_blank_lines=True, parse_dates=['id_centro_vacunacion', 'id_eess'])
+df = pd.read_csv('data.csv',sep = ";",  skip_blank_lines=True, nrows=1000000,parse_dates=['id_centro_vacunacion', 'id_eess'])
 
-import gdown
-
-########################################################
+#################################
 #id = 1Y9A1gXBN8OgLXoNVAOE3Wm7zfCkpf9Y8
 @st.experimental_memo
 def download_data():
@@ -85,16 +97,12 @@ option = st.selectbox(
 
 
 
-excel_file = "Centros de vacunación.xlsx" 
+"""excel_file = "Centros de vacunación.xlsx" 
 sheet_name = "Libro1"
 df = pd.read_excel(excel_file,
                   sheet_name = sheet_name,
                   usecols = "B:D",
-                  header = 1)
-
-
-
-
+                  header = 1)"""
 
 st.write("Seleccionó:", option)
 if option == 'Centros de Vacunación':   
