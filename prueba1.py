@@ -20,9 +20,7 @@ from streamlit_echarts import st_echarts
 st.sidebar.header("Barra de menú")
 
 #descripcion inicial
-st.set_page_config(page_title = 'Centros de Vacunación',
-                   page_icon = 'syringe:',
-                   layout="wide" )
+page_icon = 'syringe:'
 st.title(':clipboard: Centros de Vacunación') 
 
 st.subheader("Integrantes")
