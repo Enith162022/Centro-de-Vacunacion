@@ -16,11 +16,14 @@ from pyecharts import options as opts
 from pyecharts.charts import Bar
 from streamlit_echarts import st_pyecharts
 from streamlit_echarts import st_echarts
-########################################
 ###################################################
 st.sidebar.header("Barra de menú")
 
 #descripcion inicial
+st.set_page_config(page_title = 'Centros de Vacunación',
+                   page_icon = ':syringe:', 
+                   )
+
 st.title("Centros de vacunación")
 st.subheader("Integrantes")
 st.write(""" - Aguilar Rojas, Enith""")  
