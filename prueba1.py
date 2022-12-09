@@ -70,11 +70,13 @@ st.sidebar.header("Departamentos del Perú:")
 Departamento = st.sidebar.multiselect(
     "Seleccione un departamento:",
     options = df['Departamento'].unique(),
+    default = df['Departamento'].unique() 
 )
 
 Distritos = st.sidebar.multiselect(
     "Seleccione:",
     options = df['# Centros de Vacunación'].unique(),
+    default = df['# Centros de Vacunación'].unique()
 )
 
 
