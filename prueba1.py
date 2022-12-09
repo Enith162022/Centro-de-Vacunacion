@@ -73,7 +73,7 @@ st.dataframe(df)
 """### gif from url"""
 st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
 
-file_ = open("C:\Spyder", "rb")
+file_ = open("17902-covid19.gif", "rb")
 contents = file_.read()
 data_url = base64.b64encode(contents).decode("utf-8")
 file_.close()
