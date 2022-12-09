@@ -68,9 +68,17 @@ df = pd.read_excel(archivo_excel,
                    usecols = "A:F",
                   )
 st.dataframe(df) 
-
-
 ################################################################
+fig_general = px.bar(
+    x="Departamento",
+    y='C.Vac',
+    title = '<b>Departamentos vs C.Vacunación</b>',
+    template = 'plotly_white',
+)
+
+
+
+###########################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
 #@st.experimental_nemo
 def dowload_data():
