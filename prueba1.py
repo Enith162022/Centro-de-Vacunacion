@@ -67,19 +67,23 @@ df = pd.read_excel(archivo_excel,
                    usecols = 'A:F')
 
 st.sidebar.header("Departamentos del Perú:")
-Depart = st.sidebar.multiselect(
-    "Seleccione un departamento:",
-    #options = df['Departamento'].unique(),
-    default = df['Departamento'].unique() 
+depart = st.sidebar.multiselect(
+    "Seleccione el Departamento:",
+    options = df[''].unique(),
+    default = df[''].unique() 
 )
 
-Centros = st.sidebar.multiselect(
-    "Seleccione:",
-    options = df['# Centros de Vacunación'].unique(),
-    default = df['# Centros de Vacunación'].unique()
+nombres = st.sidebar.multiselect(
+    "Seleccione :",
+    options = df['nombre'].unique(),
+    default = df['nombre'].unique() 
 )
 
-df_seleccion = df.query("Departamento == @Depart  & # Centros de Vacunación == @Centros" )
+df_sele = df.query(" == @depart  & nombre == @nombres" )
+total_nombre = int(df_sele['nombre'].count())
+left_column, right_column = st.columns(2)
+
+st.dataframe(df_sele) 
 
 ################################################################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
