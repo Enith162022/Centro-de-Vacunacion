@@ -21,7 +21,7 @@ st.sidebar.header("Barra de menú")
 st.title(':syringe: Centros de Vacunación') 
 st.subheader("Integrantes")
 st.write(""" - Aguilar Rojas, Enith""")  
-st.write(""" - Fuertes Lizarbe, Mirko""")
+st.write(""" - Fuertes Lizarbe, Mirko Frank""")
 st.write(""" - Rojas Rua, Rocio""")
 ######################################################
 st.subheader("¿Cual es el objetivo:") 
@@ -32,7 +32,6 @@ st.write("""para poner fin a la pandemia de COVID-19, por lo que es enormemente"
 st.write("""alentador ver que hay tantas vacunas en fase de prueba.La OMS  esta""")
 st.write("""rabajando incansablemente con asociados para desarrollar , fabricar""")
 st.write("""y desplegar vacunas seguras y eficaces.""")
-
 from PIL import Image
 image = Image.open('centro_vacuna.jpg')
 st.image(image)
@@ -72,7 +71,6 @@ def dowload_data():
 #######################################################
 excel_excel= "CV.xlsx" 
 hoja_excel = "Libro1"
-
 df = pd.read_excel(excel_excel,
                    sheet_name = "hoja_excel",
                    usecols = "B:D",
