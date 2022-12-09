@@ -16,27 +16,10 @@ from pyecharts import options as opts
 from pyecharts.charts import Bar
 from streamlit_echarts import st_pyecharts
 from streamlit_echarts import st_echarts
-#id = 1Gu65mnJ_lxE0BdbkL1nTq5qaFJ1dJ9tq
-@st.experimental_memo
+
 
 #################################
-#id = 1Y9A1gXBN8OgLXoNVAOE3Wm7zfCkpf9Y8
-@st.experimental_memo
-def download_data():
-    url = "https://drive.google.com/uc?id= 1Y9A1gXBN8OgLXoNVAOE3Wm7zfCkpf9Y8"
-    output = "data.csv"
-    gdown.download(url,output,quiet = False)
-download_data()
-st.dataframe(download_data())
-@st.cache
-def centros_vac():
-    df_centrosvac = pd.read(download_data())
-    df_centrosvac = df_centrosvac.rename(columns={
-                'latitud':'lat',
-                'longitud':'lon',
-            })
-    return df_centrosvac
-##st.map(centros_vac()):  
+ 
 ###################################################
 st.sidebar.header("Barra de menú")
 
