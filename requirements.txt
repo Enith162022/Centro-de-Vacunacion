@@ -2,3 +2,4 @@ gdown
 pyecharts
 streamlit_echarts
 openpyxl
+pip
