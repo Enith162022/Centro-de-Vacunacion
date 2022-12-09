@@ -76,8 +76,12 @@ fig_general = px.bar(
     template = 'plotly_white',
 )
 
-
-
+hide_st_style = 
+            <style>
+            footer {visibility: hidden;}
+            </style>
+            
+st.markdown(hide_st_style = True)
 ###########################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
 #@st.experimental_nemo
