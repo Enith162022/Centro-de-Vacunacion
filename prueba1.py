@@ -60,11 +60,11 @@ with col3:
     
 st.write("**Fuente:** ONU https://www.who.int/es/health-topics/coronavirus#tab=tab_3")
 ################################################################
-archivo_excel = 'CVF.xlsx' 
-hoja_excel = 'TABLA' 
+archivo_excel = 'DATOSF.xlsx' 
+hoja_excel = 'Centros de vacunacion final' 
 df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
-                   usecols = 'B:D')
+                   usecols = 'A:F')
 
 st.sidebar.header("Departamentos del Perú:")
 Depart = st.sidebar.multiselect(
