@@ -36,8 +36,7 @@ st.subheader("¿Cuáles son los síntomas del Coronavirus?")
 ##############################################################################
 col1, col2, col3= st.columns(3)
 with col1:
-    st.subheader("Síntomas habituales") 
-    st.write("""- Fiebre""")  
+    st.subheader("Síntomas habituales")   
     st.write("""- Cansancio""")
     st.write("""- Tos""")
     st.write("""- Pérdida del gusto o del olfato        
@@ -48,8 +47,7 @@ with col2:
     st.subheader("Síntomas menos habituales") 
     st.write("""- Dolor de garganta""")
     st.write("""- Molestias""")
-    st.write("""- Diarrea""")
-    st.write("""- Erupción cutánea        
+    st.write("""- Diarrea""")        
              """)
     st.write(":confused:") 
 with col3:
