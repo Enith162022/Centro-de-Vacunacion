@@ -82,10 +82,10 @@ st.markdown(
 ################tabla circular
 archivo_excel = "DATOSF.xlsx"
 hoja_excel = "TABLA1"
-df = pd.read_excel(archivo_excel,
+"""df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
                    usecols = "A:C",
-                  )
+                  )"""
 st.dataframe(df)
 df_personas = df.groupby(['Departamento'], as_index = False)['C.Vac'].count()   
 st.dataframe(df) 
