@@ -30,14 +30,6 @@ st.write(""" - Aguilar Rojas, Enith""")
 st.write(""" - Fuertes Lizarbe, Mirko""")
 st.write(""" - Rojas Rua, Rocio""")
 ######################################################
-excel_excel= "CV.xlsx" 
-hoja_excel = "Libro1"
-df = pd.read_excel(excel_excel,
-                  sheet_name = hoja_excel,
-                  usecols = "B:D",
-                  header = 1)
-
-
 st.subheader("¿Cual es el objetivo:") 
 st.write("""Facilitar al usuario la disponibilidad de centros de vacunación, dada por una estrategia para poder promocionar y facilitar la Vacunación en el país""") 
 st.subheader("Contexto") 
@@ -75,7 +67,16 @@ with col3:
 
 st.write("**Fuente:** ONU https://www.who.int/es/health-topics/coronavirus#tab=tab_3")
 #######################################################3333333333
+excel_excel= "CV.xlsx" 
+hoja_excel = "Libro1"
+df = pd.read_excel(excel_excel,
+                  sheet_name = hoja_excel,
+                  usecols = "B:D",
+                  header = 1)
 
+
+
+#############################
 
 st.write("Seleccionó:", option)
 if option == 'Centros de Vacunación':   
