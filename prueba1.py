@@ -17,9 +17,6 @@ from pyecharts.charts import Bar
 from streamlit_echarts import st_pyecharts
 from streamlit_echarts import st_echarts
 ########################################
- #@st.experimental_memo
- #def download_data():
- 
 ###################################################
 st.sidebar.header("Barra de menú")
 
@@ -68,7 +65,7 @@ with col3:
 st.write("**Fuente:** ONU https://www.who.int/es/health-topics/coronavirus#tab=tab_3")
 ##############################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
-@st.experimental_nemo
+#@st.experimental_nemo
 def dowload_data():
 	#https://drive.google.com/uc?id=MIOOO
 	url="https://drive.google.com/uc?id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM"
