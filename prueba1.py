@@ -76,7 +76,7 @@ fig_general = px.bar(
     template = 'plotly_white',
 )
 
-st.dataframe(df) 
+st.bar_chart
 
 ###########################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
