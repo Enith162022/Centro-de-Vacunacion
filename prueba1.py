@@ -21,10 +21,10 @@ st.sidebar.header("Barra de menú")
 
 #descripcion inicial
 st.set_page_config(page_title = 'Centros de Vacunación',
-                   page_icon = 'syringe:', 
-                   )
+                   page_icon = 'syringe:',
+                   layout="wide" )
+st.title(':clipboard: Centros de Vacunación') 
 
-st.title("Centros de vacunación")
 st.subheader("Integrantes")
 st.write(""" - Aguilar Rojas, Enith""")  
 st.write(""" - Fuertes Lizarbe, Mirko""")
