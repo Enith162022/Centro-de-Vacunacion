@@ -72,8 +72,8 @@ def dowload_data():
     gdown.download(url,output,quiet=False)
 
 def download_data():
-#df = pd.read_csv(r'C:\Users\51952\Downloads\PositivosCovid\positivos_covid.csv',sep=";", skip_blank_lines=True, parse_dates=['id_centro_vacunacion', 'id_eess'])
-df = pd.read_csv('data.csv',
+##df = pd.read_csv(r'C:\Users\51952\Downloads\PositivosCovid\positivos_covid.csv',sep=";", skip_blank_lines=True, parse_dates=['id_centro_vacunacion', 'id_eess'])
+df = pd.read_csv("data.csv",
                  sep = ";",
                  skip_blank_lines=True, 
                  nrows=1000,
