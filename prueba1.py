@@ -66,7 +66,21 @@ with col3:
     st.write("""- Dolor en el pecho""")
 
 st.write("**Fuente:** ONU https://www.who.int/es/health-topics/coronavirus#tab=tab_3")
-#######################################################3333333333
+##############################
+#id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
+@st.experimental_nemo
+def dowload_data():
+	#https://drive.google.com/uc?id=MIOOO
+	url="https://drive.google.com/uc?id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM"
+	output="data.csv"
+	gdown.download(url,output,quiet=False)
+download_data()
+#df = pd.read_csv(r'C:\Users\51952\Downloads\PositivosCovid\positivos_covid.csv',sep=";", skip_blank_lines=True, parse_dates=['id_centro_vacunacion', 'id_eess'])
+df = pd.read_csv('data.csv',sep = ";",  skip_blank_lines=True, nrows=1000,parse_dates=['id_centro_vacunacion', 'id_eess'])
+st.dataframe(data.head(20))
+
+
+#######################################################
 excel_excel= "CV.xlsx" 
 hoja_excel = "Libro1"
 
