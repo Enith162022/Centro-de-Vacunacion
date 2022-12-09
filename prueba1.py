@@ -11,6 +11,7 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import urllib.request
+import base64
 
 from pyecharts import options as opts
 from pyecharts.charts import Bar
