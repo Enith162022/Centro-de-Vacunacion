@@ -68,7 +68,7 @@ df = pd.read_excel(archivo_excel,
                    usecols = "A:C",
                   )
 st.dataframe(df)
-df_personas = df.groupby(['Departamento'], as_index = False)['C.Vac'].count()   
+df_personas = df.groupby(['Departamento'], as_index = False)['C.Vac']   
 st.dataframe(df) 
 st.write(df_personas) 
 #Crear un grafico de torta (pie chart)
