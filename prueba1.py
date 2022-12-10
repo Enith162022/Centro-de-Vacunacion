@@ -60,33 +60,26 @@ st.write("**Fuente:** ONU https://www.who.int/es/health-topics/coronavirus#tab=t
 st.subheader("Base de datos") 
 st.write("""La base de datos trabaja con un total de 19385 Centros de Vacunación en todo el país""")  
 archivo_excel = "DATOSF.xlsx"
-hoja_excel = "BaseD"
+hoja_excel = "TABLA1"
 df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
-                   usecols = "A:F",
+                   usecols = "A:C",
                   )
-st.dataframe(df) 
+st.dataframe(df)
 ################################################################gif
 option = ["Departamentos", "nombre"]
 model = st.sidebar.selectbox("Elija una opción",option)
-if option == "Departamentos":
-    archivo_excel = "DATOSF.xlsx"
-    hoja_excel = "TABLA1"
-    df = pd.read_excel(archivo_excel,
-                       sheet_name = hoja_excel,
-                       usecols = "A:C",
-                      )
-    st.dataframe(df)
-    
-    st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
-    file_ = open("k87feb4b.png", "rb")
-    contents = file_.read()
-    data_url = base64.b64encode(contents).decode("utf-8")
-    file_.close()
-    st.markdown(
-    f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
-    unsafe_allow_html=True,
-    )
+
+st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
+file_ = open("k87feb4b.png", "rb")
+contents = file_.read()
+data_url = base64.b64encode(contents).decode("utf-8")
+file_.close()
+st.markdown(
+f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
+unsafe_allow_html=True,
+)
+"""
 else:
 df_personas = df.groupby(['Departamento'], as_index = False)['C.Vac'].count()   
 st.dataframe(df) 
@@ -97,7 +90,7 @@ pie_chart = px.pie(df_personas,
                    values = 'C.Vac',
                    names = 'Departamento') 
 st.plotly_chart(pie_chart)     
-    
+ """   
     
 ###########################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
