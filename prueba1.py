@@ -17,12 +17,45 @@ from pyecharts.charts import Bar
 from streamlit_echarts import st_pyecharts
 from streamlit_echarts import st_echarts
 ###################################################
-st.sidebar.header("Barra de menú")
 st.title(':syringe: Centros de Vacunación') 
 st.subheader("Integrantes")
 st.write(""" - Aguilar Rojas, Enith""")  
 st.write(""" - Lizarbe Fuertes, Mirko Frank""")
 st.write(""" - Rojas Rua, Rocio""")
+
+st.sidebar.header("Barra de menú")
+with st.sidebar:
+    selected = option(
+        menu= 'Menu principal',
+        options = ["Departamentos", "Graficas"],
+        menu_icon='cast',
+        default_index=0, )
+if selected ==  "Departamentos":   
+    st.write("""Selección de departamento""")
+    st.subheader("Seleccione el departamento donde requiere vacunarse") 
+    st.write("Se le presentará diversos Centros de Vacunación en el departamento de su elección")
+    coli1, coli2= st.columns(2)
+    with coli1:
+        result =st.button("Amazonas")
+        if result:
+            archivo_excel = "departamentos.xlsx"
+            hoja_excel = "Amazonas"
+            df = pd.read_excel(archivo_excel,
+                           sheet_name = hoja_excel,
+                           usecols = "A:B",)
+            st.dataframe(df)
+    with coli2:
+        result =st.button("Ancash") 
+        if result:
+            archivo_excel = "departamentos.xlsx"
+            hoja_excel = "Ancash"
+            df = pd.read_excel(archivo_excel,
+                           sheet_name = hoja_excel,
+                           usecols = "A:B",
+                          )
+            st.dataframe(df)
+    
+    
 ######################################################
 st.subheader("¿Cual es el objetivo:") 
 st.write("""Facilitar al usuario la disponibilidad de centros de vacunación en todo el país, dada por una estrategia para poder promocionar y facilitar la Vacunación en diversos departamentos y respectivos distritos de todo el Perú""") 
@@ -80,7 +113,7 @@ pie_chart = px.pie(df,
                    names = 'Departamento') 
 st.plotly_chart(pie_chart) 
 #############################departamentos##############################################
-st.subheader("Seleccione el departamento donde requiere vacunarse") 
+"""st.subheader("Seleccione el departamento donde requiere vacunarse") 
 st.write("Se le presentará diversos Centros de Vacunación en el departamento de su elección")
 coli1, coli2= st.columns(2)
 with coli1:
@@ -101,7 +134,7 @@ with coli2:
                        sheet_name = hoja_excel,
                        usecols = "A:B",
                       )
-        st.dataframe(df)
+        st.dataframe(df)"""
         
 cole1, cole2= st.columns(2)
 with cole1:
