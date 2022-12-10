@@ -350,14 +350,15 @@ df = pd.read_excel(archivo_excel,
 st.dataframe(df)
 
 @st.cache
-  def cvac():
-      df_cvac = pd.read_excel(archivo_excel,
-                     sheet_name = hoja_excel,
-                     usecols = "A:C", )
-     df_cvac = df_vac.rename(columns={
-           'latitud':'lat',
-           'longitud':'lon',
-     })
+def cvac():
+    .
+    df_cvac = pd.read_excel(archivo_excel,
+                            sheet_name = hoja_excel,
+                            usecols = "A:C", )               
+    df_cvac = df_vac.rename(columns={
+        'latitud':'lat',
+        'longitud':'lon',
+     })     
      return df_cvac
 st.map(cvac())
 
