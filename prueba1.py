@@ -12,7 +12,6 @@ import numpy as np
 import plotly.express as px
 import urllib.request
 import base64
-
 from pyecharts import options as opts
 from pyecharts.charts import Bar
 from streamlit_echarts import st_pyecharts
@@ -36,8 +35,7 @@ data_url = base64.b64encode(contents).decode("utf-8")
 file_.close()
 st.markdown(
     f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
-    unsafe_allow_html=True,
-    ) 
+    unsafe_allow_html=True, ) 
 #from PIL import Image
 #image = Image.open('centro_vacuna.jpg')
 #st.image(image)
@@ -92,8 +90,7 @@ with coli1:
         hoja_excel = "Amazonas"
         df = pd.read_excel(archivo_excel,
                        sheet_name = hoja_excel,
-                       usecols = "A:B",
-                      )
+                       usecols = "A:B",)
         st.dataframe(df)
 with coli2:
     result =st.button("Ancash") 
@@ -114,8 +111,7 @@ with cole1:
         hoja_excel = "Apurimac"
         df = pd.read_excel(archivo_excel,
                        sheet_name = hoja_excel,
-                       usecols = "A:B",
-                      )
+                       usecols = "A:B", )
         st.dataframe(df)
 with cole2:
     result =st.button("Arequipa")
@@ -124,10 +120,8 @@ with cole2:
         hoja_excel = "Arequipa"
         df = pd.read_excel(archivo_excel,
                        sheet_name = hoja_excel,
-                       usecols = "A:B",
-                      )
+                       usecols = "A:B", )
         st.dataframe(df)
-
 cola1, cola2= st.columns(2)
 with cola1:
     result =st.button("Ayacucho")
@@ -149,7 +143,6 @@ with cola2:
                        usecols = "A:B",
                       )
         st.dataframe(df)
-
 colio1, colio2= st.columns(2)
 with colio1:
     result =st.button("Callao")
@@ -158,8 +151,7 @@ with colio1:
         hoja_excel = "Callao"
         df = pd.read_excel(archivo_excel,
                        sheet_name = hoja_excel,
-                       usecols = "A:B",
-                      )
+                       usecols = "A:B", )
         st.dataframe(df)
 with colio2:
     result =st.button("Cuzco")
@@ -168,10 +160,8 @@ with colio2:
         hoja_excel = "Cuzco"
         df = pd.read_excel(archivo_excel,
                        sheet_name = hoja_excel,
-                       usecols = "A:B",
-                      )
+                       usecols = "A:B", )
         st.dataframe(df)
-        
 colia1, colia2= st.columns(2)
 with colia1:
     result =st.button("Huancavelica")
@@ -180,8 +170,7 @@ with colia1:
         hoja_excel = "Huancavelica"
         df = pd.read_excel(archivo_excel,
                        sheet_name = hoja_excel,
-                       usecols = "A:B",
-                      )
+                       usecols = "A:B", )
         st.dataframe(df)
 with colia2:
     result =st.button("Huanuco")
@@ -190,10 +179,8 @@ with colia2:
         hoja_excel = "Huanuco"
         df = pd.read_excel(archivo_excel,
                        sheet_name = hoja_excel,
-                       usecols = "A:B",
-                      )
+                       usecols = "A:B", )
         st.dataframe(df)
-
 colu1, colu2= st.columns(2)
 with colu1:
     result =st.button("Ica")
@@ -202,8 +189,7 @@ with colu1:
         hoja_excel = "Ica"
         df = pd.read_excel(archivo_excel,
                        sheet_name = hoja_excel,
-                       usecols = "A:B",
-                      )
+                       usecols = "A:B", )
         st.dataframe(df)
 with colu2:  
     result =st.button("Junín")
@@ -215,7 +201,6 @@ with colu2:
                        usecols = "A:B",
                       )
         st.dataframe(df)
-        
 colum1, colum2= st.columns(2)
 with colum1:
     result =st.button("La Libertad")    
@@ -237,8 +222,6 @@ with colum2:
                        usecols = "A:B",
                       )
         st.dataframe(df)
-
-
 column1, column2= st.columns(2)
 with column1:
     result =st.button("Lima")
@@ -281,7 +264,6 @@ with columna2:
                        usecols = "A:B",
                       )
         st.dataframe(df)
-
 colt1, colt2= st.columns(2)
 with colt1:
     result =st.button("Pasco")
@@ -303,7 +285,6 @@ with colt2:
                        usecols = "A:B",
                       )
         st.dataframe(df)
-
 coln1, coln2= st.columns(2)
 with coln1:
     result =st.button("Puno")
@@ -325,7 +306,6 @@ with coln2:
                        usecols = "A:B",
                       )
         st.dataframe(df)
-
 colm1, colm2= st.columns(2)
 with colm1:
     result =st.button("Tacna")    
@@ -347,7 +327,6 @@ with colm2:
                        usecols = "A:B",
                       )
         st.dataframe(df)   
-
 result =st.button("Ucayali")
 if result:
     archivo_excel = "departamentos.xlsx"
@@ -363,7 +342,4 @@ if result:
 #def dowload_data():
     #url="https://drive.google.com/uc?id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM"
     #output="data.csv"
-    #gdown.download(url,output,quiet=False)
-
-    
-    
+    #gdown.download(url,output,quiet=False)    
