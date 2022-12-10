@@ -358,7 +358,7 @@ def cvac():
         'latitud':'lat',
         'longitud':'lon',
      })     
-     return df_cvac
+    return df_cvac
 st.map(cvac())
 
 ##########################################################################################
