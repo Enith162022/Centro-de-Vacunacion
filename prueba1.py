@@ -84,7 +84,7 @@ pie_chart = px.pie(df,
 st.plotly_chart(pie_chart) 
 ###########
 st.subheader("departamentos edvnd") 
-coli1, coli2, coli3= st.columns(3)
+coli1, coli2= st.columns(2)
 with coli1:
     result =st.button("Amazonas")
     if result:
@@ -105,16 +105,7 @@ with coli2:
                        usecols = "A:B",
                       )
         st.dataframe(df)
-with coli3:
-    result =st.button("Apurimac")
-    if result:
-        archivo_excel = "departamentos.xlsx"
-        hoja_excel = "Apurimac"
-        df = pd.read_excel(archivo_excel,
-                       sheet_name = hoja_excel,
-                       usecols = "A:B",
-                      )
-        st.dataframe(df)
+
 ##################departamentos##############################################
 result =st.button("Amazonas")
 if result:
