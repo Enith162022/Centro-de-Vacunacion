@@ -62,19 +62,19 @@ model = st.sidebar.selectbox("Elija una opción",option)
 st.subheader("Base de datos") 
 st.write("""La base de datos trabaja con un total de 19385 Centros de Vacunación en todo el país""")  
 archivo_excel = "DATOSF.xlsx"
-hoja_excel = "BaseD"
+hoja_excel = "TABLA1"
 df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
-                   usecols = "A:H",
+                   usecols = "A:C",
                   )
 st.dataframe(df)
-df_personas = df.groupby(['Departamento'], as_index = False)['trayect'].count() 
+df_personas = df.groupby(['Departamento'], as_index = False)['C.Vac'].count() 
 df_personas2 = df_personas
 st.dataframe(df)
 st.write(df_personas2) 
 pie_chart = px.pie(df_personas2, 
                    title = 'Cantidad de Centros de Vacunación por Departamento', 
-                   values = 'trayect',
+                   values = 'C.Vac',
                    names = 'Departamento') 
 st.plotly_chart(pie_chart) 
 ################################################################gif
