@@ -62,13 +62,13 @@ model = st.sidebar.selectbox("Elija una opción",option)
 st.subheader("Base de datos") 
 st.write("""La base de datos trabaja con un total de 19385 Centros de Vacunación en todo el país""")  
 archivo_excel = "DATOSF.xlsx"
-hoja_excel = "TABLA1"
+hoja_excel = "BaseD"
 df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
-                   usecols = "A:C",
+                   usecols = "A:G",
                   )
 st.dataframe(df)
-df_personas = df.groupby(['Departamento'], as_index = False)['C.Vac'] 
+df_personas = df.groupby(['Departamento'], as_index = False)['trayect'].count() 
 df_personas2 = df_personas
 st.write(df_personas2) 
 pie_chart = px.pie(df_personas2, 
