@@ -74,8 +74,8 @@ pie_chart = px.pie(df,
                    names = 'Departamento') 
 st.plotly_chart(pie_chart) 
 ################################################################gif
-st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
-file_ = open("k87feb4b.png", "rb")
+st.markdown("![Alt Text](https://lottiefiles.com/21474-medical-frontliners)")
+file_ = open("21474-medical-frontliners.gif", "rb")
 contents = file_.read()
 data_url = base64.b64encode(contents).decode("utf-8")
 file_.close()
