@@ -22,10 +22,6 @@ st.subheader("Integrantes")
 st.write(""" - Aguilar Rojas, Enith""")  
 st.write(""" - Lizarbe Fuertes, Mirko Frank""")
 st.write(""" - Rojas Rua, Rocio""")
-
-st.sidebar.header("Barra de menú")
-
-    
 ######################################################
 st.subheader("Objetivo:") 
 st.write("""Facilitar al usuario la disponibilidad de centros de vacunación en todo el país, dada por una estrategia para poder promocionar y facilitar la Vacunación en diversos departamentos y respectivos distritos de todo el Perú""") 
@@ -66,11 +62,10 @@ with col3:
     st.write("""- Dolor en el pecho
     """)
 st.write("**Fuente:** ONU https://www.who.int/es/health-topics/coronavirus#tab=tab_3")
-option = ["Departamentos", "nombre"]
-model = st.sidebar.selectbox("Elija una opción",option)
 ################################################################
 st.subheader("Base de datos") 
 st.write("""La base de datos trabaja con un total de 19385 Centros de Vacunación en todo el país""")  
+
 archivo_excel = "DATOSF.xlsx"
 hoja_excel = "TABLA1"
 df = pd.read_excel(archivo_excel,
