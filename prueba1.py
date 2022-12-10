@@ -27,7 +27,7 @@ st.sidebar.header("Barra de menú")
 
     
 ######################################################
-st.subheader("¿Cual es el objetivo:") 
+st.subheader("Objetivo:") 
 st.write("""Facilitar al usuario la disponibilidad de centros de vacunación en todo el país, dada por una estrategia para poder promocionar y facilitar la Vacunación en diversos departamentos y respectivos distritos de todo el Perú""") 
 st.subheader("Contexto") 
 st.write("""El acceso equitativo a vacunas   seguras  y eficaces es fundamental para poner fin a la pandemia de COVID-19, por lo que es enormemente alentador ver que hay tantas vacunas en fase de prueba. La OMS  está trabajando incansablemente con asociados para desarrollar, fabricar y desplegar vacunas seguras y eficaces.""")
