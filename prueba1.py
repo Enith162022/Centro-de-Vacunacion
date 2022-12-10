@@ -70,8 +70,7 @@ hoja_excel = "TABLA1"
 
 df = pd.read_excel(archivo_excel, 
                    sheet_name = hoja_excel,
-                   usecols = "A:C",
-                   )
+                   usecols = "A:C", )
 st.dataframe(df)
 
 
