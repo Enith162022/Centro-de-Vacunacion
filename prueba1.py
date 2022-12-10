@@ -348,6 +348,16 @@ df = pd.read_excel(archivo_excel,
                    usecols = "A:C", )
 st.dataframe(df)
 
+@st.cache
+def cvac():
+    df_cvac = pd.read_csv("coordenadas_de_centros_vac")
+    df_cvac = df_vac.rename(columns={
+         'latitud':'lat',
+         'longitud':'lon',
+    })
+    return df_cvac
+datos = cvac()
+st.map(datos)
 
 ##########################################################################################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
