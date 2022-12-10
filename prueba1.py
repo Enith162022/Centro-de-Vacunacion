@@ -29,9 +29,19 @@ st.subheader("¿Cual es el objetivo:")
 st.write("""Facilitar al usuario la disponibilidad de centros de vacunación en todo el país, dada por una estrategia para poder promocionar y facilitar la Vacunación en diversos departamentos y respectivos distritos de todo el Perú""") 
 st.subheader("Contexto") 
 st.write("""El acceso equitativo a vacunas   seguras  y eficaces es fundamental para poner fin a la pandemia de COVID-19, por lo que es enormemente alentador ver que hay tantas vacunas en fase de prueba. La OMS  está trabajando incansablemente con asociados para desarrollar, fabricar y desplegar vacunas seguras y eficaces.""")
-from PIL import Image
+st.markdown("![Alt Text](https://lottiefiles.com/21474-medical-frontliners)")
+file_ = open("21474-medical-frontliners.gif", "rb")
+contents = file_.read()
+data_url = base64.b64encode(contents).decode("utf-8")
+file_.close()
+st.markdown(
+    f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
+    unsafe_allow_html=True,
+    ) 
+
+"""from PIL import Image
 image = Image.open('centro_vacuna.jpg')
-st.image(image)
+st.image(image)"""
 st.subheader("¿Cuáles son los síntomas del Coronavirus?") 
 ##############################################################################
 col1, col2, col3= st.columns(3)
@@ -74,15 +84,7 @@ pie_chart = px.pie(df,
                    names = 'Departamento') 
 st.plotly_chart(pie_chart) 
 ################################################################gif
-st.markdown("![Alt Text](https://lottiefiles.com/21474-medical-frontliners)")
-file_ = open("21474-medical-frontliners.gif", "rb")
-contents = file_.read()
-data_url = base64.b64encode(contents).decode("utf-8")
-file_.close()
-st.markdown(
-    f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
-    unsafe_allow_html=True,
-    )  
+ 
 ###########################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
 #@st.experimental_nemo
