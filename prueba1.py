@@ -78,7 +78,7 @@ df = pd.read_excel(archivo_excel,
                   )
 st.dataframe(df)
 pie_chart = px.pie(df, 
-                   title = 'Cantidad de Centros de Vacunación por Departamento', 
+                   title = 'Cantidad de Centros de Vacunación por cada departamento', 
                    values = 'C.Vac',
                    names = 'Departamento') 
 st.plotly_chart(pie_chart) 
