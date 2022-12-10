@@ -22,7 +22,7 @@ st.sidebar.header("Barra de menú")
 st.title(':syringe: Centros de Vacunación') 
 st.subheader("Integrantes")
 st.write(""" - Aguilar Rojas, Enith""")  
-st.write(""" - Fuertes Lizarbe, Mirko Frank""")
+st.write(""" - Lizarbe Fuertes, Mirko Frank""")
 st.write(""" - Rojas Rua, Rocio""")
 ######################################################
 st.subheader("¿Cual es el objetivo:") 
