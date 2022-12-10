@@ -4,5 +4,4 @@ streamlit_echarts
 plotly_express
 bar
 read
-plotly_chart
 pie
