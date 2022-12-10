@@ -353,11 +353,7 @@ st.dataframe(df)
 def cvac():
     df_cvac = pd.read_excel(archivo_excel,
                             sheet_name = hoja_excel,
-                            usecols = "A:C", )               
-    df_cvac = df_vac.rename(columns={
-        'latitud':'lat',
-        'longitud':'lon',
-     })     
+                            usecols = "A:C", )                 
     return df_cvac
 st.map(cvac())
 
