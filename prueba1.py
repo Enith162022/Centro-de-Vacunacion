@@ -358,7 +358,8 @@ def cvac():
                                         "longitud":"lon",
                                        })                                 
     return df_cvac
-st.map(cvac())
+datos = cvac()
+st.map(datos)
 
 ##########################################################################################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
