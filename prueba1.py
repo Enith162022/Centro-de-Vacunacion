@@ -67,16 +67,20 @@ st.subheader("Base de datos")
 st.write("""La base de datos trabaja con un total de 19385 Centros de Vacunación en todo el país""")  
 archivo_excel = "DATOSF.xlsx"
 hoja_excel = "TABLA1"
-df = pd.read_excel(archivo_excel,
+
+df = pd.read_excel(archivo_excel, 
                    sheet_name = hoja_excel,
-                   usecols = "A:C", )
+                   usecols = "A:C",
+                   )
 st.dataframe(df)
+
 
 pie_chart = px.pie(df, 
                    title = 'Cantidad de Centros de Vacunación por cada departamento', 
                    values = 'C.Vac',
                    names = 'Departamento') 
 st.plotly_chart(pie_chart) 
+
 #############################departamentos##############################################
 st.subheader("Seleccione el departamento donde requiere vacunarse") 
 st.write("Se le presentará diversos Centros de Vacunación en el departamento de su elección")
