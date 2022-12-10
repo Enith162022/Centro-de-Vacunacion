@@ -73,8 +73,6 @@ pie_chart = px.pie(df,
                    values = 'C.Vac',
                    names = 'Departamento') 
 st.plotly_chart(pie_chart) 
-
-
 ################################################################gif
 st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
 file_ = open("k87feb4b.png", "rb")
