@@ -84,7 +84,6 @@ pie_chart = px.pie(df,
 st.plotly_chart(pie_chart) 
 ################################################################gif
 result =st.button("Amazonas")
-st.write(result)
 if result:
     archivo_excel = "departamentos.xlsx"
     hoja_excel = "Amazonas"
@@ -95,7 +94,6 @@ if result:
     st.dataframe(df)
     
 result =st.button("Ancash") 
-#st.write(result)
 if result:
     archivo_excel = "departamentos.xlsx"
     hoja_excel = "Ancash"
