@@ -65,7 +65,7 @@ archivo_excel = "DATOSF.xlsx"
 hoja_excel = "BaseD"
 df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
-                   usecols = "A:G",
+                   usecols = "A:H",
                   )
 st.dataframe(df)
 df_personas = df.groupby(['Departamento'], as_index = False)['trayect'].count() 
