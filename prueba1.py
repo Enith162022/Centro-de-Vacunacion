@@ -68,10 +68,11 @@ df = pd.read_excel(archivo_excel,
                    usecols = "A:C",
                   )
 st.dataframe(df)
-df_personas = df.groupby(['Departamento'], as_index = False)['C.Vac'].count()  
-st.write(df_personas) 
-pie_chart = px.pie(df_personas, 
-                   title = 'Participantes', 
+df_personas = df.groupby(['Departamento'], as_index = False)['C.Vac'] 
+df_personas = df_personas2
+st.write(df_personas2) 
+pie_chart = px.pie(df_personas2, 
+                   title = 'Cantidad de Centros de Vacunación por Departamento', 
                    values = 'C.Vac',
                    names = 'Departamento') 
 st.plotly_chart(pie_chart) 
