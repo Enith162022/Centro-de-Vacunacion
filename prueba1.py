@@ -83,7 +83,10 @@ pie_chart = px.pie(df,
                    names = 'Departamento') 
 st.plotly_chart(pie_chart) 
 ################################################################gif
- 
+ result =st.button("Seleccione")
+ st.write(result)
+if result:
+    st.write("datos")
 ###########################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
 #@st.experimental_nemo
