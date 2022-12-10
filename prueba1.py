@@ -71,12 +71,14 @@ st.dataframe(df)
 df_personas = df.groupby(['Departamento'], as_index = False)['C.Vac']
 df_personas2 = df_personas
 
-st.write(df_personas2) 
+st.dataframe(df_personas2) 
 pie_chart = px.pie(df_personas2, 
                    title = 'Cantidad de Centros de Vacunación por Departamento', 
                    values = 'C.Vac',
                    names = 'Departamento') 
 st.plotly_chart(pie_chart) 
+
+
 ################################################################gif
 st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
 file_ = open("k87feb4b.png", "rb")
