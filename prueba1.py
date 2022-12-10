@@ -350,7 +350,7 @@ st.dataframe(df)
 
 @st.cache
 def cvac():
-    df_cvac = pd.read_csv("coordenadas_de_centros_vac")
+    df_cvac = pd.read_csv("coordenadas_de_centros_vac.csv")
     df_cvac = df_vac.rename(columns={
          'latitud':'lat',
          'longitud':'lon',
