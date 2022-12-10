@@ -71,12 +71,13 @@ st.dataframe(df)
 df_personas = df.groupby(['Departamento'], as_index = False)['C.Vac']   
 st.dataframe(df) 
 st.write(df_personas) 
-#Crear un grafico de torta (pie chart)
+
 pie_chart = px.pie(df_personas, 
                    title = 'Participantes', 
                    values = 'C.Vac',
                    names = 'Departamento') 
 st.plotly_chart(pie_chart) 
+
 ################################################################gif
 st.markdown("![Alt Text](https://lottiefiles.com/17902-covid19)")
 file_ = open("k87feb4b.png", "rb")
