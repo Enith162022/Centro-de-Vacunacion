@@ -105,9 +105,31 @@ with coli2:
                        usecols = "A:B",
                       )
         st.dataframe(df)
+        
+cole1, cole2= st.columns(2)
+with cole1:
+    result =st.button("Apurimac")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Apurimac"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
+with cole2:
+    result =st.button("Arequipa")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Arequipa"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
 
 ##################departamentos##############################################
-result =st.button("Amazonas")
+"""result =st.button("Amazonas")
 if result:
     archivo_excel = "departamentos.xlsx"
     hoja_excel = "Amazonas"
@@ -125,9 +147,9 @@ if result:
                    sheet_name = hoja_excel,
                    usecols = "A:B",
                   )
-    st.dataframe(df)
+    st.dataframe(df)"""
     
-result =st.button("Apurimac")
+"""result =st.button("Apurimac")
 if result:
     archivo_excel = "departamentos.xlsx"
     hoja_excel = "Apurimac"
@@ -145,7 +167,7 @@ if result:
                    sheet_name = hoja_excel,
                    usecols = "A:B",
                   )
-    st.dataframe(df)
+    st.dataframe(df)"""
 
 result =st.button("Ayacucho")
 if result:
