@@ -67,6 +67,7 @@ df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
                    usecols = "A:G",
                   )
+st.dataframe(df)
 df_personas = df.groupby(['Departamento'], as_index = False)['trayect'].count() 
 df_personas2 = df_personas
 st.dataframe(df)
