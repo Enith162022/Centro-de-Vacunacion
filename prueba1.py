@@ -95,7 +95,7 @@ if result:
     st.dataframe(df)
     
 result =st.button("Ancash") 
-st.write(result)
+#st.write(result)
 if result:
     archivo_excel = "departamentos.xlsx"
     hoja_excel = "Ancash"
