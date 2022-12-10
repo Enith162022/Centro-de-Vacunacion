@@ -83,10 +83,25 @@ pie_chart = px.pie(df,
                    names = 'Departamento') 
 st.plotly_chart(pie_chart) 
 ################################################################gif
-result =st.button("Seleccione")
+result =st.button("Seleccione departamento")
 st.write(result)
 if result:
-    st.write("datos")
+    archivo_excel = "departamentos.xlsx"
+    hoja_excel = "Amazonas"
+    df = pd.read_excel(archivo_excel,
+                   sheet_name = hoja_excel,
+                   usecols = "A:B",
+                  )
+    st.dataframe(df)
+    
+if result:
+    archivo_excel = "departamentos.xlsx"
+    hoja_excel = "Ancash"
+    df = pd.read_excel(archivo_excel,
+                   sheet_name = hoja_excel,
+                   usecols = "A:B",
+                  )
+    st.dataframe(df)
 ###########################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
 #@st.experimental_nemo
