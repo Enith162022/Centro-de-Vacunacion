@@ -38,12 +38,11 @@ st.markdown(
     f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
     unsafe_allow_html=True,
     ) 
-
-"""from PIL import Image
-image = Image.open('centro_vacuna.jpg')
-st.image(image)"""
-st.subheader("¿Cuáles son los síntomas del Coronavirus?") 
+#from PIL import Image
+#image = Image.open('centro_vacuna.jpg')
+#st.image(image)
 ##############################################################################
+st.subheader("¿Cuáles son los síntomas del Coronavirus?") 
 col1, col2, col3= st.columns(3)
 with col1:
     st.subheader("Síntomas habituales:frowning:")   
