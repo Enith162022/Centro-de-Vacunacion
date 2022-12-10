@@ -82,8 +82,9 @@ pie_chart = px.pie(df,
                    values = 'C.Vac',
                    names = 'Departamento') 
 st.plotly_chart(pie_chart) 
-###########
-st.subheader("departamentos edvnd") 
+#############################departamentos##############################################
+st.subheader("Seleccione el departamento donde requiere vacunarse") 
+st.write("Se le presentará diversos Centros de Vacunación en el departamento de su elección")
 coli1, coli2= st.columns(2)
 with coli1:
     result =st.button("Amazonas")
@@ -128,241 +129,225 @@ with cole2:
                       )
         st.dataframe(df)
 
-##################departamentos##############################################
-"""result =st.button("Amazonas")
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Amazonas"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
-    
-result =st.button("Ancash") 
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Ancash"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)"""
-    
-"""result =st.button("Apurimac")
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Apurimac"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
+cola1, cola2= st.columns(2)
+with cola1:
+    result =st.button("Ayacucho")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Ayacucho"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
+with cola2:
+    result =st.button("Cajamarca")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Cajamarca"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
 
-result =st.button("Arequipa")
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Arequipa"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)"""
+colio1, colio2= st.columns(2)
+with colio1:
+    result =st.button("Callao")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Callao"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
+with colio2:
+    result =st.button("Cuzco")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Cuzco"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
+        
+colia1, colia2= st.columns(2)
+with colia1:
+    result =st.button("Huancavelica")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Huancavelica"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
+with colia2:
+    result =st.button("Huanuco")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Huanuco"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
 
-result =st.button("Ayacucho")
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Ayacucho"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
+colu1, colu2= st.columns(2)
+with colu1:
+    result =st.button("Ica")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Ica"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
+with colu2:  
+    result =st.button("Junín")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Junín"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
+        
+colum1, colum2= st.columns(2)
+with colum1:
+    result =st.button("La Libertad")    
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "La Libertad"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
+with colum2:
+    result =st.button("Lambayeque")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Lambayeque"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
 
-result =st.button("Cajamarca")
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Cajamarca"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
 
-result =st.button("Callao")
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Callao"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
-result =st.button("Cuzco")
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Cuzco"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
+column1, column2= st.columns(2)
+with column1:
+    result =st.button("Lima")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Lima"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
+with column2:
+    result =st.button("Loreto")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Loreto"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
+columna1, columna2= st.columns(2)
+with columna1:
+    result =st.button("Madre de Dios")    
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Madre de Dios"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
+with columna2:
+    result =st.button("Moquegua")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Moquegua"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
 
-result =st.button("Huancavelica")
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Huancavelica"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
+colt1, colt2= st.columns(2)
+with colt1:
+    result =st.button("Pasco")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Pasco"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
+with colt2:
+    result =st.button("Piura")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Piura"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
 
-result =st.button("Huanuco")
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Huanuco"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
-result =st.button("Ica")
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Ica"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
-result =st.button("Junín")
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Junín"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
+coln1, coln2= st.columns(2)
+with coln1:
+    result =st.button("Puno")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Puno"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
+with coln2:
+    result =st.button("San Martin")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "San Martin"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
 
-result =st.button("La Libertad")    
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "La Libertad"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
-
-result =st.button("Lambayeque")
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Lambayeque"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df) 
-result =st.button("Lima")
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Lima"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
-
-result =st.button("Loreto")
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Loreto"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
-result =st.button("Madre de Dios")    
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Madre de Dios"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
-
-result =st.button("Moquegua")
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Moquegua"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
-
-result =st.button("Pasco")
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Pasco"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
-
-result =st.button("Piura")
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Piura"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
-
-result =st.button("Puno")
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Puno"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
-
-result =st.button("San Martin")
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "San Martin"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
-
-result =st.button("Tacna")    
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Tacna"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
-
-result =st.button("Tumbes")
-if result:
-    archivo_excel = "departamentos.xlsx"
-    hoja_excel = "Tumbes"
-    df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel,
-                   usecols = "A:B",
-                  )
-    st.dataframe(df)
+colm1, colm2= st.columns(2)
+with colm1:
+    result =st.button("Tacna")    
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Tacna"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
+with colm2:
+    result =st.button("Tumbes")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Tumbes"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)   
 
 result =st.button("Ucayali")
 if result:
@@ -373,7 +358,7 @@ if result:
                    usecols = "A:B",
                   )
     st.dataframe(df)
-###########################
+##########################################################################################
 #id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
 #@st.experimental_nemo
 #def dowload_data():
