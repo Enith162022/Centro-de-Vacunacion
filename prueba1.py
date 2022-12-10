@@ -82,7 +82,40 @@ pie_chart = px.pie(df,
                    values = 'C.Vac',
                    names = 'Departamento') 
 st.plotly_chart(pie_chart) 
-################################################################gif
+###########
+st.subheader("departamentos edvnd") 
+coli1, coli2, coli3= st.columns(3)
+with coli1:
+    result =st.button("Amazonas")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Amazonas"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
+with coli2:
+    result =st.button("Ancash") 
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Ancash"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
+with coli3:
+    result =st.button("Apurimac")
+    if result:
+        archivo_excel = "departamentos.xlsx"
+        hoja_excel = "Apurimac"
+        df = pd.read_excel(archivo_excel,
+                       sheet_name = hoja_excel,
+                       usecols = "A:B",
+                      )
+        st.dataframe(df)
+##################departamentos##############################################
 result =st.button("Amazonas")
 if result:
     archivo_excel = "departamentos.xlsx"
