@@ -337,7 +337,7 @@ if result:
                    usecols = "A:B",
                   )
     st.dataframe(df)
-#####################################################33
+#####################################################
 #Importar el mapa de localización de los centros de vacunación
 archivo_excel = "coordenadas_de_centros_vac.xlsx"
 hoja_excel = "coordenadas"
@@ -357,4 +357,3 @@ def cvac():
     return df_cvac
 datos = cvac()
 st.map(datos)
-
