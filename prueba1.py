@@ -18,6 +18,7 @@ from pyecharts.charts import Bar
 from streamlit_echarts import st_pyecharts
 from streamlit_echarts import st_echarts
 ###################################################
+st.sidebar.header("Barra de menú")
 st.title(':syringe: Centros de Vacunación') 
 st.subheader("Integrantes")
 st.write(""" - Aguilar Rojas, Enith""")  
@@ -35,7 +36,8 @@ data_url = base64.b64encode(contents).decode("utf-8")
 file_.close()
 st.markdown(
     f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
-    unsafe_allow_html=True, ) 
+    unsafe_allow_html=True, 
+    ) 
 ##############################################################################
 st.subheader("¿Cuáles son los síntomas del Coronavirus?") 
 col1, col2, col3= st.columns(3)
@@ -61,13 +63,16 @@ with col3:
     """)
 st.write("**Fuente:** ONU https://www.who.int/es/health-topics/coronavirus#tab=tab_3")
 ################################################################
+option=["Departamento", "nombre"]
+model = st.sidebar.selectbox("Elija una opción", option)
 st.subheader("Base de datos") 
 st.write("""La base de datos trabaja con un total de 19385 Centros de Vacunación en todo el país""")  
 archivo_excel = "DATOSF.xlsx"
 hoja_excel = "TABLA1"
-df = pd.red_excel(archivo_excel,
+df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
-                   usecols = "A:C", )
+                   usecols = "A:C",
+                  )
 st.dataframe(df)
 ##################################################
 pie_chart = px.pie(df, 
