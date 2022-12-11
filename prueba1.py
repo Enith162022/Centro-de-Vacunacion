@@ -347,8 +347,9 @@ if result:
                   )
     st.dataframe(df)
 #####################################################
+
 #Importar el mapa de localización de los centros de vacunación
-archivo_excel = "coordenadas_de_centros_vac.xlsx"
+archivo_excel = "ultimamod.xlsx"
 hoja_excel = "coordenadas"
 df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
@@ -364,5 +365,5 @@ def cvac():
                                         "longitud":"lon",
                                        })                                 
     return df_cvac
-datos = cvac()
-st.map(datos)
+
+st.map(cvac())
