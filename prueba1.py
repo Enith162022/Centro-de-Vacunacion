@@ -72,7 +72,6 @@ hoja_excel = "TABLA1"
 df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel
                    usecols = "A:C"
-                   header=0
                   )
 st.dataframe(df)
 
