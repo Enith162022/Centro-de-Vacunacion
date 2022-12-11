@@ -75,9 +75,7 @@ pie_chart = px.pie(df,
                    title = 'Cantidad de Centros de Vacunación por cada departamento', 
                    values = 'C.Vac',
                    names = 'Departamento') 
-
 st.plotly_chart(pie_chart) 
-
 #############################departamentos##############################################
 st.subheader("Seleccione el departamento donde requiere vacunarse") 
 st.write("Se le presentará diversos Centros de Vacunación en el departamento de su elección")
@@ -87,10 +85,12 @@ with coli1:
     if result:
         archivo_excel = "departamentos.xlsx"
         hoja_excel = "Amazonas"
+        
         df = pd.read_excel(archivo_excel,
                        sheet_name = hoja_excel,
                        usecols = "A:B",)
         st.dataframe(df)
+        
 with coli2:
     result =st.button("Ancash") 
     if result:
