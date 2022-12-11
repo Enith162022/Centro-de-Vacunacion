@@ -70,7 +70,7 @@ st.write("""La base de datos trabaja con un total de 19385 Centros de Vacunació
 archivo_excel = "DATOSF.xlsx"
 hoja_excel = "TABLA1"
 df = pd.read_excel(archivo_excel,
-                   sheet_name = hoja_excel
+                   sheet_name = hoja_excel,
                    usecols = "A:C"
                   )
 st.dataframe(df)
