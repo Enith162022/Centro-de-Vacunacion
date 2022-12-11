@@ -18,7 +18,7 @@ from pyecharts.charts import Bar
 from streamlit_echarts import st_pyecharts
 from streamlit_echarts import st_echarts
 ###################################################
-st.title(':syringe: Centros de Vacunación') 
+st.title(':syringe: Centros de Vacunación de Covid19') 
 st.subheader("Integrantes")
 st.write(""" - Aguilar Rojas, Enith""")  
 st.write(""" - Lizarbe Fuertes, Mirko Frank""")
