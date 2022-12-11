@@ -36,9 +36,6 @@ file_.close()
 st.markdown(
     f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
     unsafe_allow_html=True, ) 
-#from PIL import Image
-#image = Image.open('centro_vacuna.jpg')
-#st.image(image)
 ##############################################################################
 st.subheader("¿Cuáles son los síntomas del Coronavirus?") 
 col1, col2, col3= st.columns(3)
@@ -66,19 +63,19 @@ st.write("**Fuente:** ONU https://www.who.int/es/health-topics/coronavirus#tab=t
 ################################################################
 st.subheader("Base de datos") 
 st.write("""La base de datos trabaja con un total de 19385 Centros de Vacunación en todo el país""")  
-
 archivo_excel = "DATOSF.xlsx"
 hoja_excel = "TABLA1"
 df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
-                   usecols = "A:C"
-                  )
+                   usecols = "A:C",
+                   header =0)
 st.dataframe(df)
-
+##################################################
 pie_chart = px.pie(df, 
                    title = 'Cantidad de Centros de Vacunación por cada departamento', 
                    values = 'C.Vac',
                    names = 'Departamento') 
+
 st.plotly_chart(pie_chart) 
 
 #############################departamentos##############################################
@@ -328,7 +325,8 @@ with colm2:
                        sheet_name = hoja_excel,
                        usecols = "A:B",
                       )
-        st.dataframe(df)   
+        st.dataframe(df)
+        
 result =st.button("Ucayali")
 if result:
     archivo_excel = "departamentos.xlsx"
@@ -339,6 +337,4 @@ if result:
                   )
     st.dataframe(df)
 
-##########################################################################################
 
- 
