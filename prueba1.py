@@ -10,6 +10,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
+
 import urllib.request
 import base64
 from pyecharts import options as opts
@@ -68,12 +69,11 @@ st.write("""La base de datos trabaja con un total de 19385 Centros de Vacunació
 
 archivo_excel = "DATOSF.xlsx"
 hoja_excel = "TABLA1"
-
-df = pd.read_excel(archivo_excel, 
-                   sheet_name = hoja_excel,
-                   usecols = "A:C",
-                   )
-
+df = pd.read_excel(archivo_excel,
+                   sheet_name = hoja_excel
+                   usecols = "A:C"
+                   header=0
+                  )
 st.dataframe(df)
 
 pie_chart = px.pie(df, 
@@ -342,10 +342,4 @@ if result:
 
 ##########################################################################################
 
-##########################################################################################
-#id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM
-#@st.experimental_nemo
-#def dowload_data():
-    #url="https://drive.google.com/uc?id=13iNig4VIvt5Gm0znUt2eq3_YnGCgCQHM"
-    #output="data.csv"
-    #gdown.download(url,output,quiet=False)    
+ 
