@@ -23,6 +23,7 @@ st.subheader("Integrantes")
 st.write(""" - Aguilar Rojas, Enith""")  
 st.write(""" - Lizarbe Fuertes, Mirko Frank""")
 st.write(""" - Rojas Rua, Rocio""")
+st.write(""" - Canal Alvarado, Luis Felipe""")
 ######################################################
 st.subheader("Objetivo:") 
 st.write("""Facilitar al usuario la disponibilidad de centros de vacunación en todo el país, dada por una estrategia para poder promocionar y facilitar la Vacunación en diversos departamentos y respectivos distritos de todo el Perú""") 
