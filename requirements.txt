@@ -1,4 +1,5 @@
 gdown
+openpyxl
 pyecharts
 streamlit_echarts
 plotly_express
