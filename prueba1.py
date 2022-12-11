@@ -63,8 +63,6 @@ with col3:
     """)
 st.write("**Fuente:** ONU https://www.who.int/es/health-topics/coronavirus#tab=tab_3")
 ################################################################
-option=["Departamento", "nombre"]
-model = st.sidebar.selectbox("Elija una opción", option)
 st.subheader("Base de datos") 
 st.write("""La base de datos trabaja con un total de 19385 Centros de Vacunación en todo el país""")  
 archivo_excel = "DATOSF.xlsx"
