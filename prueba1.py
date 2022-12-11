@@ -26,6 +26,14 @@ st.write(""" - Rojas Rua, Rocio""")
 ######################################################
 st.subheader("Objetivo:") 
 st.write("""Facilitar al usuario la disponibilidad de centros de vacunación en todo el país, dada por una estrategia para poder promocionar y facilitar la Vacunación en diversos departamentos y respectivos distritos de todo el Perú""") 
+
+st.subheader("MINSA") 
+st.write("""Ministerio de Salud del Perú, es el organismo perteneciente al Poder Ejecutivo, el cual se encarga de administrar todo lo relacionado con el área de la salud en el país, y así poder contribuir con el constante desarrollo y crecimiento de este importante sector, para beneficio de todos los ciudadanos. """)
+
+st.subheader("Dataset") 
+st.write("""Marco de Gobernanza de Datos del Estado Peruano está constituido por instrumentos técnicos y normativos que establecen los requisitos mínimos que las entidades de la Administración Pública deben implementar conforme a su contexto legal, tecnológico y estratégico para asegurar un nivel básico y aceptable para la recopilación, procesamiento, publicación, almacenamiento y apertura de los datos que administre.""") 
+st.write("**Fuente:** Plataforma Nacional de Datos Abiertos https://www.datosabiertos.gob.pe/dataset/centros-de-vacunacion")
+
 st.subheader("Contexto") 
 st.write("""El acceso equitativo a vacunas   seguras  y eficaces es fundamental para poner fin a la pandemia de COVID-19, por lo que es enormemente alentador ver que hay tantas vacunas en fase de prueba. La OMS  está trabajando incansablemente con asociados para desarrollar, fabricar y desplegar vacunas seguras y eficaces.""")
 #st.markdown("![Alt Text](https://lottiefiles.com/21474-medical-frontliners)")
