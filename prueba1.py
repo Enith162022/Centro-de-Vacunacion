@@ -356,7 +356,7 @@ df = pd.read_excel(archivo_excel,
                    usecols = "A:C", )
 st.dataframe(df)
 st.subheader("Mapa representativa")
-st.write("""Se aprecia diversos puntos de centros de vacunación""")
+st.write("""Se aprecia diversos puntos de Centros de Vacunación en todo el Perú""")
 @st.cache
 def cvac():
     df_cvac = pd.read_excel(archivo_excel,
